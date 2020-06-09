@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>DA Web Test</title>
+</head>
+<body>
+  <div class="container">
+    <h1>DA Web Test</h1>
+
+    <div class="question">
+      <div class="question__num">1.</div>
+      <div class="question__body">
+        <div class="question__text">
+          Na stránce máme pod sebou dva blokové prvky. Horní má nastavený <code>margin-bottom: 30px</code>, spodní má nastavený <code>margin-top: 50px</code>. Jaký bude mezi prvky vertikální rozestup?
+        </div>
+
+        <ol class="question__answers" type="A">
+          <li>30px</li>
+          <li class="correct">50px</li>
+          <li>80px</li>
+          <li>20px</li>
+        </ol>
+      </div>
+      <div class="question__points">3 body</div>
+    </div>
+
+    <div class="question">
+      <div class="question__num">2.</div>
+      <div class="question__body">
+        <div class="question__text">
+          Jakým zápisem v CSS zajístíte, že určitá část CSS bude platit pouze pro velikost okna prohlížeče větší než 720 pixelů?
+        </div>
+      </div>
+      <div class="question__points">3 body</div>
+    </div>
+
+    <div class="question">
+      <div class="question__num">3.</div>
+      <div class="question__body">
+        <div class="question__text">
+          <p>Mějme následující HTML strukturu</p>
+          <pre><code><!--
+          -->&lt;div class="row"&gt;
+<!--      -->  &lt;div class="column"&gt;sloupec 1&lt;/div&gt;
+<!--      -->  &lt;div class="column"&gt;sloupec 2&lt;/div&gt;
+<!--      -->  &lt;div class="column"&gt;sloupec 3&lt;/div&gt;
+<!--      -->&lt;/div&gt;
+          </code></pre>
+          
+          <p>Vytvořte CSS styly pro třídy <code>row</code> a <code>column</code> tak, aby prvky s třídou <code>column</code></p>
+          
+          <ol>
+            <li>byly na stránce horizontálně vedle sebe,</li>
+            <li>každý zabíral na stránce horizontálně stejně místa,</li>
+            <li>všechny byly vertikálně zarovnené na střed.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="question__points">3 body</div>
+    </div>
+
+    <div class="question">
+      <div class="question__num">4.</div>
+      <div class="question__body">
+        <div class="question__text">
+          <p>Mějme následující JavaScriptovou funkci.</p>
+
+          <pre><code><!--
+          -->function handleClick() {
+<!--      -->  console.log(‘ahoj’);
+<!--      -->}<!--
+          --></code></pre>
+          
+          <p>Který z následujících výrazů správně přidá na tlačitko <code>btnElm</code> posluchač události?</p>
+
+          <ol class="question__answers" type="A">
+            <li><code>btnElm.addEventListener(‘click’, handleClick());</code></li>
+            <li><code>btnElm.addEventListener(click, handleClick);</code></li>
+            <li><code>btnElm.addEventListener(‘click’, ‘handleClick’);</code></li>
+            <li class="correct"><code>btnElm.addEventListener(‘click’, handleClick);</code></li>
+          </ol>
+        </div>
+      </div>
+      <div class="question__points">3 body</div>
+    </div>
+
+    <div class="question">
+      <div class="question__num">5.</div>
+      <div class="question__body">
+        <div class="question__text">
+          <p>Uvažte následující kód</p>
+          <pre><code><!--
+          -->const titleElm = document.querySelector(‘#title’);
+<!--      -->titleElm.textContent = ‘My awesome webpage’;
+          </code></pre>
+          
+          <p>Co je v tomto kódu s největší pravděpodobností špatně, jestliže při jeho spuštění obdržíme tuto chybu?</p>
+          
+          <pre><code>Uncaught TypeError: Cannot set property 'textContent' of null</code></pre>
+        </div>
+      </div>
+      <div class="question__points">3 body</div>
+    </div>
+
+    <div class="question">
+      <div class="question__num">6.</div>
+      <div class="question__body">
+        <div class="question__text">
+          <p>Napište funkci <code>drop</code>, která na vstupu obdrží pole čísel <code>numbers</code> a číslo <code>k</code> a vrátí nové pole, ve kterém bude oproti zadanému poli chybět každý <i>k</i>-tý prvek. 
+          
+          <p>Ukázka použití funkce v konzoli</p>
+
+          <pre><code><!--
+          -->&gt; drop([3, 2, 5, 4, 8, 1, 9, 6], 3)
+  <!--    -->[3, 2, 4, 8, 9, 6]<!--
+          --></code></pre>
+        </div>
+      </div>
+      <div class="question__points">3 body</div>
+    </div>
+
+    <div class="question">
+      <div class="question__num">7.</div>
+      <div class="question__body">
+        <div class="question__text">
+          <p>Označte všechny možnosti, které vystihují možná použití nástroje Webpack.</p>
+
+          <ol class="question__answers" type="A">
+            <li class="correct">Sestavení projektu do produkční podoby</li>
+            <li>Hostování vašeho projektu na internetu</li>
+            <li class="correct">Zabalení JavaScriptových zdrojových kódů do jednoho výsledného souboru.</li>
+            <li class="correct">Minifikace kódu tak, aby zabíral co nejméně místa.</li>
+          </ol>
+        </div>
+      </div>
+      <div class="question__points">3 body</div>
+    </div>
+
+    <div class="question">
+      <div class="question__num">8.</div>
+      <div class="question__body">
+        <div class="question__text">
+          <p>Vytvořte pole objektů, reprezentující obsah lednice. Každý objekt má</p>
+          
+          <ul>
+            <li>název, např. máslo, rajčata</li>
+            <li>typ, např. mléčný výrobek, zelenina</li>
+            <li>počet dnů, za kolik vyprší datum spotřeby.</li>
+          </ul>
+
+          <p>Vaše pole by mělo obsahovat alespoň 3 objekty.</p>
+        </div>
+      </div>
+      <div class="question__points">3 body</div>
+    </div>
+
+    <div class="question">
+      <div class="question__num">9.</div>
+      <div class="question__body">
+        <div class="question__text">
+          <p>Vytvořte funkci <code>renderFridgeItem</code>, která jako vstup bere objekt se stejnou strukturou jako položka v lednici z předchozí otázky. Funkce na základě údajů v objektu vrátí nově vytvořený DOM element s náledující strukturou.</p>
+          
+          <pre><code><!--
+          -->&lt;div class="fridge-item"&gt;
+<!--      -->  &lt;div class="fridge-item__name"&gt;Smetana&lt;/div&gt;
+<!--      -->  &lt;div class="fridge-item__type"&gt;Mléčný výrobek&lt;/div&gt;
+<!--      -->  &lt;div class="fridge-item__expr"&gt;12&lt;/div&gt;
+<!--      -->&lt;/div&gt;
+          </code></pre>
+        </div>
+      </div>
+      <div class="question__points">3 body</div>
+    </div>
+
+    <div class="question">
+      <div class="question__num">10.</div>
+      <div class="question__body">
+        <div class="question__text">
+          <p>Uvažte následující Vue.js aplikaci</p>
+
+          <pre><code><!--
+          -->&lt;div id=&quot;app&quot;&gt;
+<!--      -->  &lt;button
+<!--      -->    class=&quot;btn btn-active&quot;
+<!--      -->    v-on:click=&quot;btnClick&quot;
+<!--      -->  &gt;
+<!--      -->  Ok
+<!--      -->  &lt;/button&gt;
+<!--      -->&lt;/div&gt;
+<!--      -->&lt;script src=&quot;vue.js&quot;&gt;&lt;/script&gt;
+<!--      -->&lt;script&gt;
+<!--      -->  new Vue({
+<!--      -->    el: '#app',
+<!--      -->    data: {
+<!--      -->      active: true,
+<!--      -->    },
+<!--      -->    methods: {
+<!--      -->      btnClick() {
+<!--      -->        this.active = !this.active;
+<!--      -->      }
+<!--      -->    }
+<!--      -->  });
+<!--      -->&lt;/script&gt;<!--
+        --></code></pre>
+
+          <p>Chceme, aby se CSS třída <code>btn-active</code> na tlačítku objevila pouze pokud má datový atribut <code>active</code> hodnotu <code>true</code>.</p>
+
+          <p>Zařiďte výše uvedené změnou jednoho řádku v kódu aplikace. </p>
+        </div>
+      </div>
+      <div class="question__points">3 body</div>
+    </div>
+
+    <div class="question">
+      <div class="question__num">11.</div>
+      <div class="question__body">
+        <div class="question__text">
+          <p>Stáhněte si <a href="dadjokes.zip" download>webovou aplikaci</a> napsanou pomocí čistého JavaScriptu. Vytvořte pod svým GitHub účtem repozitář s názvem <code>dadjokes</code> a nahrajte do něj obsah tohoto projektu.</p>
+
+          <p>Uveďte odkaz na repozitář s projektem.</p>
+        </div>
+      </div>
+      <div class="question__points">3 body</div>
+    </div>
+
+    <div class="question">
+      <div class="question__num">12.</div>
+      <div class="question__body">
+        <div class="question__text">
+          <p>Vezměte projekt z předchozí otázky, nainstalujte v něm všechny potřebné závislosti pomocí</p>
+
+          <pre><code>npm install</code></pre>
+
+          <p>a sestavte aplikaci pomocí</p>
+
+          <pre><code>npm run build</code></pre>
+
+          <p>Vykoušejte si, jak aplikace funguje. Prohlédněte si její zdrojový kód a přepište ji do frameworku Vue.js. Vaše řešní pushněte do Git repozitáře do větve master.</p>
+        </div>
+      </div>
+      <div class="question__points">3 body</div>
+    </div>
+
+    <div class="question">
+      <div class="question__num">13.</div>
+      <div class="question__body">
+        <div class="question__text">
+          <p>Vezměte projekt z předchozí otázky</p>
+          
+          <ol>
+            <li>
+              Ve svém Git repozitáři založte novou větev s názvem <code>components</code>.
+            </li>
+            <li>
+              V této větvi vytvořte Vue komponentu <code>App</code>, která bude představovat celou aplikaci.
+            </li>
+            <li>
+              Vytvořte komponentu <code>Joke</code>, která zobrazuje jeden vtip.
+            </li>
+            <li>
+              V komponentě <code>App</code> vytvořte pole objektů představující jednotlivé vtipy s počty likeů a obrázky uživatelů dle následujícího <a href="jokes.txt"> textového souboru.</a>
+            </li>
+            <li>
+              Zobrazte každý vtip z vašeho pole pomocí komponenty <code>Joke</code>.
+            </li>
+          </ol>
+             
+          <p>Výsledná aplikace by měla zobrazovat seznam všech vtipů se správnými uživateli a počty likeů. Tlačítka u každého vtipu by měla správně fungovat. </p>
+
+          <p>Pushněte svoji větev <code>components</code> do repozitáře. Nemergujte ji do větve <code>master</code>.</p>
+        </div>
+      </div>
+      <div class="question__points">4 body</div>
+    </div>
+  </div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

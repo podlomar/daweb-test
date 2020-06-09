@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Ubuntu+Mono&display=swap');
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: 'Roboto', sans-serif;
+}
+
+body {
+  color: #555;
+}
+
+.container {
+  max-width: 720px;
+  margin: 0 auto;
+}
+
+.question {
+  display: flex;
+  align-items: flex-start;
+  line-height: 150%;
+  margin-bottom: 2rem;
+}
+
+.question__num {
+  flex: 0 0 4rem;
+  color: #bbb;
+  font-size: 3rem;
+  text-align: right;
+  margin-top: 0.75rem;
+  margin-right: 1rem;
+}
+
+.question__body {
+  flex: 1;
+}
+
+.question__points {
+  flex: 0 0 5rem;
+  text-align: right;
+}
+
+pre {
+  margin: 0 0 1rem 0;
+}
+
+code {
+  font-family: 'Ubuntu Mono', monospace;
+  font-size: 16px;
+}
+
+p {
+  margin: 0 0 1rem 0;
+}
+
+.correct {
+  background-color: yellow;
+}
