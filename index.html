@@ -109,13 +109,13 @@
       <div class="question__num">6.</div>
       <div class="question__body">
         <div class="question__text">
-          <p>Napište funkci <code>drop</code>, která na vstupu obdrží pole čísel <code>numbers</code> a číslo <code>k</code> a vrátí nové pole, ve kterém bude oproti zadanému poli chybět každý <i>k</i>-tý prvek. 
+          <p>Napište funkci <code>cutoff</code>, která na vstupu obdrží pole čísel <code>numbers</code> a číslo <code>max</code>. Tato funkce projde vstupní pole a všechna čísla, která jsou větší než hodnota <code>max</code>, nahradí v poli přímo hodnotou <code>max</code>. Funkce výsledné pole vrátí jako svůj výstup.
           
           <p>Ukázka použití funkce v konzoli</p>
 
           <pre><code><!--
-          -->&gt; drop([3, 2, 5, 4, 8, 1, 9, 6], 3)
-  <!--    -->[3, 2, 4, 8, 9, 6]<!--
+          -->&gt; cutoff([8, 2, 5, 9, 7, 1, 6, 10], 6)
+  <!--    -->[6, 2, 5, 6, 6, 1, 6, 6]<!--
           --></code></pre>
         </div>
       </div>
@@ -208,7 +208,7 @@
 
           <p>Chceme, aby se CSS třída <code>btn-active</code> na tlačítku objevila pouze pokud má datový atribut <code>active</code> hodnotu <code>true</code>.</p>
 
-          <p>Zařiďte výše uvedené změnou jednoho řádku v kódu aplikace. </p>
+          <p>Zařiďte výše uvedené změnou nejvýše dvou řádků v kódu aplikace. </p>
         </div>
       </div>
       <div class="question__points">3 body</div>
