@@ -58,3 +58,9 @@ p {
 .correct {
   background-color: yellow;
 }
+
+h2 {
+  margin: 3rem 0 2rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid silver;
+}
