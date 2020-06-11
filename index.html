@@ -8,10 +8,18 @@
 </head>
 <body>
   <div class="container">
-    <h1>DA Web Test</h1>
+    <h1>
+      <span>DA Web test</span>
+      <span>50 bodů</span>
+    </h1>
 
-    <div class="question">
-      <div class="question__num">1.</div>
+    <h2>
+      <span>HTML a CSS</span>
+      <span>11 bodů</span>
+    </h2>
+
+    <div id="q01" class="question">
+      <a href="#q01" class="question__num">1.</a>
       <div class="question__body">
         <div class="question__text">
           Na stránce máme pod sebou dva blokové prvky. Horní má nastavený <code>margin-bottom: 30px</code>, spodní má nastavený <code>margin-top: 50px</code>. Jaký bude mezi prvky vertikální rozestup?
@@ -24,24 +32,44 @@
           <li>20px</li>
         </ol>
       </div>
-      <div class="question__points">3 body</div>
+      <div class="question__points">2 body</div>
     </div>
 
-    <div class="question">
-      <div class="question__num">2.</div>
+
+    <div id="q02" class="question">
+      <a href="#q02" class="question__num">2.</a>
       <div class="question__body">
         <div class="question__text">
-          Jakým zápisem v CSS zajístíte, že určitá část CSS bude platit pouze pro velikost okna prohlížeče větší než 720 pixelů?
+          <p>Předpokládejte, že máme následující HTML strukturu:</p>
+          <pre><code><!--
+          -->&lt;div class="container"&gt;
+<!--      -->  &lt;div class="title"&gt;Titulek&lt;/div&gt;
+<!--      -->&lt;/div&gt;
+          </code></pre>
+
+          <p>Jaké CSS styly musíme nastavit třídám <code>container</code> a <code>title</code>, abychom prvek s třídou <code>title</code> mohli absolutně napozicovat uvnitř prvku s třídou <code>container</code> na souřadnice 150px od levého okraje a 80px od horního okraje?</p>
+
         </div>
       </div>
       <div class="question__points">3 body</div>
     </div>
 
-    <div class="question">
-      <div class="question__num">3.</div>
+
+    <div id="q03" class="question">
+      <a href="#q03" class="question__num">3.</a>
       <div class="question__body">
         <div class="question__text">
-          <p>Mějme následující HTML strukturu</p>
+          Vytváříme responzivní stránku. Jakým zápisem v CSS zajístíte, že určitá část CSS bude platit pouze pro velikost okna prohlížeče větší než 720 pixelů?
+        </div>
+      </div>
+      <div class="question__points">3 body</div>
+    </div>
+
+    <div id="q04" class="question">
+      <a href="#q04" class="question__num">4.</a>
+      <div class="question__body">
+        <div class="question__text">
+          <p>Mějme následující HTML strukturu:</p>
           <pre><code><!--
           -->&lt;div class="row"&gt;
 <!--      -->  &lt;div class="column"&gt;sloupec 1&lt;/div&gt;
@@ -49,64 +77,71 @@
 <!--      -->  &lt;div class="column"&gt;sloupec 3&lt;/div&gt;
 <!--      -->&lt;/div&gt;
           </code></pre>
-          
-          <p>Vytvořte CSS styly pro třídy <code>row</code> a <code>column</code> tak, aby prvky s třídou <code>column</code></p>
-          
+
+          <p>Vytvořte CSS styly pro třídy <code>row</code> a <code>column</code> tak, aby prvky s třídou <code>column</code>:</p>
+
           <ol>
             <li>byly na stránce horizontálně vedle sebe,</li>
-            <li>každý zabíral na stránce horizontálně stejně místa,</li>
-            <li>všechny byly vertikálně zarovnené na střed.</li>
+            <li>každý zabíral na stránce horizontálně stejně místa (tj. byly stejně široké),</li>
+            <li>všechny byly vůči sobě vertikálně zarovnené na střed.</li>
           </ol>
         </div>
       </div>
       <div class="question__points">3 body</div>
     </div>
 
-    <div class="question">
-      <div class="question__num">4.</div>
+    <h2>
+      <span>JavaScript</span>
+      <span>20 bodů</span>
+    </h2>
+
+    <div id="q05" class="question">
+      <a href="#q05" class="question__num">5.</a>
       <div class="question__body">
         <div class="question__text">
-          <p>Mějme následující JavaScriptovou funkci.</p>
+          <p>V HTML a JavaScriptu máme následující kód:</p>
 
+          <p>HTML:</p>
           <pre><code><!--
-          -->function handleClick() {
-<!--      -->  console.log(‘ahoj’);
+          -->&lt;button id="btn"&gt;Pozdravit&lt;button&gt;<!--
+          --></code></pre>
+
+          <p>JavaScript:</p>
+          <pre><code><!--
+          -->function sayHello() {
+<!--      -->  console.log('ahoj');
 <!--      -->}<!--
           --></code></pre>
-          
-          <p>Který z následujících výrazů správně přidá na tlačitko <code>btnElm</code> posluchač události?</p>
 
-          <ol class="question__answers" type="A">
-            <li><code>btnElm.addEventListener(‘click’, handleClick());</code></li>
-            <li><code>btnElm.addEventListener(click, handleClick);</code></li>
-            <li><code>btnElm.addEventListener(‘click’, ‘handleClick’);</code></li>
-            <li class="correct"><code>btnElm.addEventListener(‘click’, handleClick);</code></li>
-          </ol>
+          <p>Napište JavaScriptový kód, který zajistí, že se po kliknutí na tlačítko zavolá funkce <code>sayHello</code>.</p>
+
         </div>
       </div>
       <div class="question__points">3 body</div>
     </div>
 
-    <div class="question">
-      <div class="question__num">5.</div>
+    <div id="q06" class="question">
+      <a href="#q06" class="question__num">6.</a>
       <div class="question__body">
         <div class="question__text">
           <p>Uvažte následující kód</p>
           <pre><code><!--
           -->const titleElm = document.querySelector(‘#title’);
-<!--      -->titleElm.textContent = ‘My awesome webpage’;
-          </code></pre>
-          
-          <p>Co je v tomto kódu s největší pravděpodobností špatně, jestliže při jeho spuštění obdržíme tuto chybu?</p>
-          
+<!--      -->titleElm.textContent = ‘My awesome webpage’;<!--
+          --></code></pre>
+
+          <p>Co je na stránce (v HTML nebo v JavaScriptu) s největší pravděpodobností špatně, jestliže při jeho spuštění obdržíme tuto chybu? </p>
+
           <pre><code>Uncaught TypeError: Cannot set property 'textContent' of null</code></pre>
+
+          <p>Popište svůj způsob uvažování.</p>
         </div>
       </div>
       <div class="question__points">3 body</div>
     </div>
 
-    <div class="question">
-      <div class="question__num">6.</div>
+    <div id="q07" class="question">
+      <a href="#q07" class="question__num">7.</a>
       <div class="question__body">
         <div class="question__text">
           <p>Napište funkci <code>cutoff</code>, která na vstupu obdrží pole čísel <code>numbers</code> a číslo <code>max</code>. Tato funkce projde vstupní pole a všechna čísla, která jsou větší než hodnota <code>max</code>, nahradí v poli přímo hodnotou <code>max</code>. Funkce výsledné pole vrátí jako svůj výstup.
@@ -122,8 +157,8 @@
       <div class="question__points">3 body</div>
     </div>
 
-    <div class="question">
-      <div class="question__num">7.</div>
+    <div id="q08" class="question">
+      <a href="#q08" class="question__num">8.</a>
       <div class="question__body">
         <div class="question__text">
           <p>Označte všechny možnosti, které vystihují možná použití nástroje Webpack.</p>
@@ -136,29 +171,29 @@
           </ol>
         </div>
       </div>
-      <div class="question__points">3 body</div>
+      <div class="question__points">2 body</div>
     </div>
 
-    <div class="question">
-      <div class="question__num">8.</div>
+    <div id="q09" class="question">
+      <a href="#q09" class="question__num">9.</a>
       <div class="question__body">
         <div class="question__text">
-          <p>Vytvořte pole objektů, reprezentující obsah lednice. Každý objekt má</p>
-          
+          <p>Vytvořte pole objektů, reprezentující obsah lednice. Pole uložte do proměnné s názvem <code>lednice</code>. Každý v poli objekt bude mít následující vlastnosti:</p>
+
           <ul>
-            <li>název, např. máslo, rajčata</li>
-            <li>typ, např. mléčný výrobek, zelenina</li>
-            <li>počet dnů, za kolik vyprší datum spotřeby.</li>
+            <li><strong>název</strong>, např. máslo, rajčata</li>
+            <li><strong>typ</strong>, např. mléčný výrobek, zelenina</li>
+            <li><strong>počet dnů</strong>, za kolik vyprší datum spotřeby</li>
           </ul>
 
-          <p>Vaše pole by mělo obsahovat alespoň 3 objekty.</p>
+          <p>Vaše pole by mělo obsahovat alespoň 5 objektů (= věcí v lednici), z nichž alespoň jeden je typu zelenina.</p>
         </div>
       </div>
       <div class="question__points">3 body</div>
     </div>
 
-    <div class="question">
-      <div class="question__num">9.</div>
+    <div id="q10" class="question">
+      <a href="#q10" class="question__num">10.</a>
       <div class="question__body">
         <div class="question__text">
           <p>Vytvořte funkci <code>renderFridgeItem</code>, která jako vstup bere objekt se stejnou strukturou jako položka v lednici z předchozí otázky. Funkce na základě údajů v objektu vrátí nově vytvořený DOM element s náledující strukturou.</p>
@@ -175,16 +210,53 @@
       <div class="question__points">3 body</div>
     </div>
 
-    <div class="question">
-      <div class="question__num">10.</div>
+    <div id="q11" class="question">
+      <a href="#q11" class="question__num">11.</a>
       <div class="question__body">
         <div class="question__text">
-          <p>Uvažte následující Vue.js aplikaci</p>
+          <p>Napiš krátký kód, který ze serveru na adrese uvedené níže získá JSON data s podrobnostmi o České republice:</p>
+
+          <p><code>https://restcountries.eu/rest/v2/alpha/cz</code></p>
+
+          <p>Do konzole vypiš zjištěný počet obyvatel ČR (vlastnost <code>population</code>).</p>
+        </div>
+      </div>
+      <div class="question__points">3 body</div>
+    </div>
+
+    <h2>
+      <span>Vue.js</span>
+      <span>19 bodů</span>
+    </h2>
+
+    <div id="q12" class="question">
+      <a href="#q12" class="question__num">12.</a>
+      <div class="question__body">
+        <div class="question__text">
+          <p>Pomocí jaké direktivy můžeme ve Vue.js skrývat/zobrazovat části obsahu? Vyber všechny správné možnosti:</p>
+
+          <ol class="question__answers" type="A">
+            <li class="correct">v-show</li>
+            <li>v-hide</li>
+            <li class="correct">v-if</li>
+            <li>v-display</li>
+          </ol>
+
+        </div>
+      </div>
+      <div class="question__points">2 body</div>
+    </div>
+
+    <div id="q13" class="question">
+      <a href="#q13" class="question__num">13.</a>
+      <div class="question__body">
+        <div class="question__text">
+          <p>Uvažte následující Vue.js aplikaci:</p>
 
           <pre><code><!--
           -->&lt;div id=&quot;app&quot;&gt;
 <!--      -->  &lt;button
-<!--      -->    class=&quot;btn btn-active&quot;
+<!--      -->    class=&quot;btn&quot;
 <!--      -->    v-on:click=&quot;btnClick&quot;
 <!--      -->  &gt;
 <!--      -->  Ok
@@ -206,46 +278,38 @@
 <!--      -->&lt;/script&gt;<!--
         --></code></pre>
 
-          <p>Chceme, aby se CSS třída <code>btn-active</code> na tlačítku objevila pouze pokud má datový atribut <code>active</code> hodnotu <code>true</code>.</p>
+          <p>Aplikace při každém kliknutí na tlačítko mění hodnotu vlastnosti <code>active</code> z <code>true</code> na <code>false</code> a obráceně.</p>
 
-          <p>Zařiďte výše uvedené změnou nejvýše dvou řádků v kódu aplikace. </p>
+          <p>Chceme, aby se tato změna projevila vizuálně i na tlačítku. Předpokládejme, že v CSS máme nastylovanou třídu <code>btn-active</code>. Když tuto třídu přidáme na tlačítko, bude tlačítko zvýrazněné jako aktivní.</p>
+
+          <p>Upravte aplikaci uvedenou výše tak, aby se na tlačítku objevila CSS třída <code>btn-active</code>, je-li hodnota vlastnosti <code>active</code> nastavena na <code>true</code>. Je-li hodnota vlastnosti <code>active</code> nastavena na <code>false</code>, třída na tlačítku nebude.</p>
+
+          <p>Jako řešení stačí poslat pouze řádky se změněným kódem. Mělo by se jednat pouze o 1-3 řádky.</p>
         </div>
       </div>
       <div class="question__points">3 body</div>
     </div>
 
-    <div class="question">
-      <div class="question__num">11.</div>
+    <div id="q14" class="question">
+      <a href="#q14" class="question__num">14.</a>
       <div class="question__body">
         <div class="question__text">
-          <p>Stáhněte si <a href="dadjokes.zip" download>webovou aplikaci</a> napsanou pomocí čistého JavaScriptu. Vytvořte pod svým GitHub účtem repozitář s názvem <code>dadjokes</code> a nahrajte do něj obsah tohoto projektu.</p>
-
-          <p>Uveďte odkaz na repozitář s projektem.</p>
+          <p>Stáhněte si projekt <a href="dadjokes.zip" download>webové aplikace</a> napsané pomocí čistého JavaScriptu. </p>
+          
+          <ol>
+            <li>Nainstalujte v něm všechny potřebné závislosti a sestavte aplikaci.</li>
+          
+            <li>Vykoušejte si, jak aplikace funguje. Prohlédněte si její zdrojový kód a přepište ji do frameworku Vue.js.</li>
+            
+            <li>Vytvořte pod svým GitHub účtem repozitář s názvem <code>dadjokes</code> a nahrajte do něj obsah tohoto projektu. Jako odpověď na otázku uveďte odkaz na repozitář s projektem.</li>
+          </ol>
         </div>
       </div>
-      <div class="question__points">3 body</div>
+      <div class="question__points">7 bodů</div>
     </div>
 
-    <div class="question">
-      <div class="question__num">12.</div>
-      <div class="question__body">
-        <div class="question__text">
-          <p>Vezměte projekt z předchozí otázky, nainstalujte v něm všechny potřebné závislosti pomocí</p>
-
-          <pre><code>npm install</code></pre>
-
-          <p>a sestavte aplikaci pomocí</p>
-
-          <pre><code>npm run build</code></pre>
-
-          <p>Vykoušejte si, jak aplikace funguje. Prohlédněte si její zdrojový kód a přepište ji do frameworku Vue.js. Vaše řešní pushněte do Git repozitáře do větve master.</p>
-        </div>
-      </div>
-      <div class="question__points">3 body</div>
-    </div>
-
-    <div class="question">
-      <div class="question__num">13.</div>
+    <div id="q15" class="question">
+      <a href="#q15" class="question__num">15.</a>
       <div class="question__body">
         <div class="question__text">
           <p>Vezměte projekt z předchozí otázky</p>
@@ -273,19 +337,8 @@
           <p>Pushněte svoji větev <code>components</code> do repozitáře. Nemergujte ji do větve <code>master</code>.</p>
         </div>
       </div>
-      <div class="question__points">4 body</div>
+      <div class="question__points">7 bodů</div>
     </div>
   </div>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-

@@ -26,11 +26,17 @@ body {
 
 .question__num {
   flex: 0 0 4rem;
-  color: #bbb;
+  color: silver;
+  text-decoration: none;
   font-size: 3rem;
   text-align: right;
   margin-top: 0.75rem;
   margin-right: 1rem;
+}
+
+.question__num:hover {
+  text-decoration: underline;
+  color: orange;
 }
 
 .question__body {
@@ -57,4 +63,15 @@ p {
 
 .correct {
   background-color: yellow;
+}
+
+h1, h2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+h2 {
+  margin: 3rem 0 2rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid silver;
 }
