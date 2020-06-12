@@ -64,3 +64,8 @@ h2 {
   padding-bottom: 1rem;
   border-bottom: 1px solid silver;
 }
+
+code {
+  font-family: 'Roboto Mono', monospace;
+  font-weight: 400;
+}

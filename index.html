@@ -5,6 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="style.css">
   <title>DA Web Test</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.0/styles/atom-one-light.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.1.0/highlight.min.js"></script>
 </head>
 <body>
   <div class="container">
@@ -38,8 +41,8 @@
           <pre><code><!--
           -->&lt;div class="container"&gt;
 <!--      -->  &lt;div class="title"&gt;Titulek&lt;/div&gt;
-<!--      -->&lt;/div&gt;
-          </code></pre>
+<!--      -->&lt;/div&gt;<!--
+          --></code></pre>
 
           <p>Jaké CSS styly musíme nastavit třídám <code>container</code> a <code>title</code>, abychom prvek s třídou <code>title</code> mohli absolutně napozicovat uvnitř prvku s třídou <code>container</code> na souřadnice 150px od levého okraje a 80px od horního okraje?</p>
 
@@ -69,8 +72,8 @@
 <!--      -->  &lt;div class="column"&gt;sloupec 1&lt;/div&gt;
 <!--      -->  &lt;div class="column"&gt;sloupec 2&lt;/div&gt;
 <!--      -->  &lt;div class="column"&gt;sloupec 3&lt;/div&gt;
-<!--      -->&lt;/div&gt;
-          </code></pre>
+<!--      -->&lt;/div&gt;<!--
+          --></code></pre>
 
           <p>Vytvořte CSS styly pro třídy <code>row</code> a <code>column</code> tak, aby prvky s třídou <code>column</code>:</p>
 
@@ -118,14 +121,14 @@
       <div class="question__body">
         <div class="question__text">
           <p>Uvažte následující kód</p>
-          <pre><code><!--
-          -->const titleElm = document.querySelector(‘#title’);
-<!--      -->titleElm.textContent = ‘My awesome webpage’;<!--
+          <pre><code class="lang-javascript"><!--
+          -->const titleElm = document.querySelector('#title');
+<!--      -->titleElm.textContent = 'My awesome webpage';<!--
           --></code></pre>
 
           <p>Co je na stránce (v HTML nebo v JavaScriptu) s největší pravděpodobností špatně, jestliže při jeho spuštění obdržíme tuto chybu? </p>
 
-          <pre><code>Uncaught TypeError: Cannot set property 'textContent' of null</code></pre>
+          <pre><code class="plaintext">Uncaught TypeError: Cannot set property 'textContent' of null</code></pre>
 
           <p>Popište svůj způsob uvažování.</p>
         </div>
@@ -401,6 +404,8 @@
     </div>
 
   </div>
+
+  <script>hljs.initHighlightingOnLoad();</script>
 </body>
 </html>
 
