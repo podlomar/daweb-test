@@ -69,3 +69,14 @@ code {
   font-family: 'Roboto Mono', monospace;
   font-weight: 400;
 }
+
+h1, h2 {
+  display: flex;
+  justify-content: space-between;
+}
+
+h2 {
+  margin: 3rem 0 2rem 0;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid silver;
+}
