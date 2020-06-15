@@ -81,9 +81,9 @@
           <p>Vytvořte CSS styly pro třídy <code>row</code> a <code>column</code> tak, aby prvky s třídou <code>column</code>:</p>
 
           <ol>
-            <li>byly na stránce horizontálně vedle sebe,</li>
-            <li>každý zabíral na stránce horizontálně stejně místa (tj. byly stejně široké),</li>
-            <li>všechny byly vůči sobě vertikálně zarovnené na střed.</li>
+            <li>byly horizontálně vedle sebe,</li>
+            <li>každý zabíral horizontálně stejně místa (tj. byly stejně široké),</li>
+            <li>byly všechny zarovnané vertikálně na střed prvku <code>.row</code>.</li>
           </ol>
         </div>
       </div>
@@ -103,7 +103,7 @@
 
           <p>HTML:</p>
           <pre><code><!--
-          -->&lt;button id="btn"&gt;Pozdravit&lt;button&gt;<!--
+          -->&lt;button id="btn"&gt;Pozdravit&lt;/button&gt;<!--
           --></code></pre>
 
           <p>JavaScript:</p>
@@ -126,8 +126,8 @@
         <div class="question__text">
           <p>Uvažte následující kód</p>
           <pre><code><!--
-          -->const titleElm = document.querySelector(‘#title’);
-<!--      -->titleElm.textContent = ‘My awesome webpage’;<!--
+          -->const titleElm = document.querySelector('#title');
+<!--      -->titleElm.textContent = 'My awesome webpage';<!--
           --></code></pre>
 
           <p>Co je na stránce (v HTML nebo v JavaScriptu) s největší pravděpodobností špatně, jestliže při jeho spuštění obdržíme tuto chybu? </p>
@@ -322,7 +322,7 @@
               V této větvi vytvořte Vue komponentu <code>App</code>, která bude představovat celou aplikaci.
             </li>
             <li>
-              Vytvořte komponentu <code>Joke</code>, která zobrazuje jeden vtip.
+              Vytvořte komponentu <code>Joke</code>, která zobrazuje jeden vtip. Tato komponenta nechť má čtyři props: <code>user</code>, <code>text</code>, <code>likes</code>, <code>dislikes</code>. 
             </li>
             <li>
               V komponentě <code>App</code> vytvořte pole objektů představující jednotlivé vtipy s počty likeů a obrázky uživatelů dle souboru <code>jokes.txt</code>.
@@ -332,9 +332,18 @@
             </li>
           </ol>
              
-          <p>Výsledná aplikace by měla zobrazovat seznam všech vtipů se správnými uživateli a počty likeů. Tlačítka u každého vtipu by měla správně fungovat. </p>
+          <p>Výsledná aplikace by měla zobrazovat seznam všech vtipů se správnými uživateli a počty likeů. Tlačítka u každého vtipu by měla fungovat tak, že mění počty likeů uvnitř každé jednotlivé komponenty. <strong>Není třeba</strong> předávat změny likeů rodičovské komponentě. Stačí, když každá komponenta bude mít vlastní data inicializovaná pomocí hodnot z props například takto.</p>
 
-          <p>Pushněte svoji větev <code>components</code> do repozitáře. Nemergujte ji do větve <code>master</code>.</p>
+          <pre><code><!--
+          -->data() {
+<!--      -->  return {
+<!--      -->    likesCount: this.likes,
+<!--      -->    dislikesCount: this.dislikes,
+<!--      -->  };
+<!--      -->}<!--
+        --></code></pre>   
+
+          <p>Pushněte svoji větev <code>components</code> do repozitáře. <strong>Nedělejte</strong> merge zpět do větve <code>master</code>, abyste nepřepsali řešení předchozího příkladu. </p>
         </div>
       </div>
       <div class="question__points">7 bodů</div>
