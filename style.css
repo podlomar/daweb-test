@@ -70,8 +70,15 @@ h1, h2 {
   justify-content: space-between;
 }
 
+h1 {
+  font-size: 2em;
+  font-size: clamp(1.5em, 7.5vw, 2em);
+}
+
 h2 {
   margin: 3rem 0 2rem 0;
   padding-bottom: 1rem;
   border-bottom: 1px solid silver;
+  font-size: 1.5em;
+  font-size: clamp(1.15em, 5.75vw, 1.5em);
 }
