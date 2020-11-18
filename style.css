@@ -25,6 +25,10 @@ body {
   margin-bottom: 2rem;
 }
 
+.question__body {
+  min-width: 0;
+}
+
 .question__num {
   flex: 0 0 1.3em;
   color: silver;
@@ -59,7 +63,6 @@ body {
 pre {
   margin: 0 0 1rem 0;
   overflow-x: auto;
-  max-width: calc(100vw - 16px); /* 16px for body margin */
 }
 
 code {
