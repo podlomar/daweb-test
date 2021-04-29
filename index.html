@@ -93,9 +93,16 @@
             <p>Mějme následující HTML strukturu:</p>
             <pre><code class="language-html"><!--
           -->&lt;div class="row"&gt;
-<!--      -->  &lt;div class="column"&gt;sloupec 1&lt;/div&gt;
-<!--      -->  &lt;div class="column"&gt;sloupec 2&lt;/div&gt;
-<!--      -->  &lt;div class="column"&gt;sloupec 3&lt;/div&gt;
+<!--      -->  &lt;div class="column"&gt;
+<!--      -->    První sloupeček
+<!--      -->  &lt;/div&gt;
+<!--      -->  &lt;div class="column"&gt;
+<!--      -->    Druhý
+<!--      -->  &lt;/div&gt;
+<!--      -->  &lt;div class="column"&gt;
+<!--      -->    A úplně&lt;br&gt;
+<!--      -->    poslední sloupeček
+<!--      -->  &lt;/div&gt;
 <!--      -->&lt;/div&gt;<!--
           --></code></pre>
 
@@ -107,7 +114,7 @@
             <ol>
               <li>byly horizontálně vedle sebe,</li>
               <li>
-                každý zabíral horizontálně stejně místa (tj. byly stejně
+                každý zabíral horizontálně třetinu řádku (tj. byly stejně
                 široké),
               </li>
               <li>
