@@ -57,17 +57,18 @@
           <div class="question__text">
             <p>Předpokládejte, že máme následující HTML strukturu:</p>
             <pre><code class="language-html"><!--
-          -->&lt;div class="container"&gt;
-<!--      -->  &lt;div class="title"&gt;Titulek&lt;/div&gt;
+          -->&lt;div class="box"&gt;
+<!--      -->  &lt;h2&gt;Kontakt&lt;/h2&gt;
+<!--      -->  &lt;a href="mailto:info@czechitas.cz"&gt;info@czechitas.cz&lt;/a&gt;&lt;br&gt;
+<!--      -->  &lt;a href="https://www.czechitas.cz/cs/kontakt"&gt;www.czechitas.cz&lt;/a&gt;
+<!--      -->  &lt;button class="close"&gt;×&lt;/button&gt;
 <!--      -->&lt;/div&gt;<!--
           --></code></pre>
 
             <p>
-              Jaké CSS styly musíme nastavit třídám <code>container</code> a
-              <code>title</code>, abychom prvek <code>.title</code> mohli
-              absolutně napozicovat? Prvek <code>.title</code> chceme mít 150px
-              od levého okraje a 80px od horního okraje prvku
-              <code>.container</code>.
+              Nastylujte třídu <code>box</code> tak, aby měla kolem sebe tenký
+              černý rámeček a zabírala polovinu šířky rodiče. Napozicujte
+              <code>close</code> do pravého horního rohu boxu.
             </p>
           </div>
         </div>
