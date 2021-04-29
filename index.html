@@ -35,17 +35,37 @@
         <a href="#q01" class="question__num">1.</a>
         <div class="question__body">
           <div class="question__text">
-            Na stránce máme pod sebou dva blokové prvky. Horní má nastavený
-            <code>margin-bottom: 30px</code>, spodní má nastavený
-            <code>margin-top: 50px</code>. Jaký bude mezi prvky vertikální
-            rozestup?
+            Pro HTML:
+            <pre><code class="language-html"><!--
+          -->&lt;h1 id="uvod" class="nadpis"&gt;Můj web&lt;/h1&gt;<!--
+          --></code></pre>
+
+            a CSS:
+            <pre><code class="language-css"><!--
+            -->#uvod {
+<!--      -->  color: #FF0000;
+<!--      -->}
+<!--      -->#uvod .nadpis {
+<!--      -->  color: #00FF00;
+<!--      -->  background-color: #00FF00 !important;
+<!--      -->}
+<!--      -->.nadpis:hover {
+<!--      -->  color: #0000FF;
+<!--      -->  background-color: #0000FF;
+<!--      -->}
+<!--      -->h1.nadpis {
+<!--      -->  background-color: #FF0000;
+<!--      -->}<!--
+          --></code></pre>
+
+            určete, jakou barvu bude prvek mít po najetí myši.
           </div>
 
           <ol class="question__answers" type="A">
-            <li>30px</li>
-            <li>50px</li>
-            <li>80px</li>
-            <li>20px</li>
+            <li>modrý text na zeleném pozadí</li>
+            <li>červený text na modrém pozadí</li>
+            <li>modrý text na červeném pozadí</li>
+            <li>červený text na zeleném pozadí</li>
           </ol>
         </div>
         <div class="question__points">2 body</div>
