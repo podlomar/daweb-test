@@ -250,23 +250,20 @@
         <div class="question__body">
           <div class="question__text">
             <p>
-              Vytvořte pole objektů, reprezentující obsah lednice. Pole uložte
-              do proměnné s názvem <code>lednice</code>. Každý objekt v poli
-              bude mít následující vlastnosti:
+              Vytvořte v čistém JavaScriptu komponentu <code>FridgeItem</code>,
+              která jako vstup bere <code>props</code> s třemi vlastnostmi:
+              <code>name</code>, <code>type</code> a <code>expiration</code>.
+              Funkce <code>FridgeItem</code> na základě údajů v objektu vrátí
+              nově vytvořený DOM element s náledující strukturou.
             </p>
 
-            <ul>
-              <li><strong>název</strong>, např. máslo, rajčata</li>
-              <li><strong>typ</strong>, např. mléčný výrobek, zelenina</li>
-              <li>
-                <strong>počet dnů</strong>, za kolik vyprší datum spotřeby
-              </li>
-            </ul>
-
-            <p>
-              Vaše pole by mělo obsahovat alespoň 5 objektů (= věcí v lednici),
-              z nichž alespoň jeden je typu zelenina.
-            </p>
+            <pre><code class="language-html"><!--
+          -->&lt;div class="fridge-item"&gt;
+<!--      -->  &lt;div class="fridge-item__name"&gt;Smetana&lt;/div&gt;
+<!--      -->  &lt;div class="fridge-item__type"&gt;Mléčný výrobek&lt;/div&gt;
+<!--      -->  &lt;div class="fridge-item__expiration"&gt;12&lt;/div&gt;
+<!--      -->&lt;/div&gt;<!--
+          --></code></pre>
           </div>
         </div>
         <div class="question__points">3 body</div>
@@ -277,20 +274,24 @@
         <div class="question__body">
           <div class="question__text">
             <p>
-              Vytvořte v čistém JavaScriptu komponentu <code>FridgeItem</code>,
-              která jako vstup bere <code>props</code> se stejnou strukturou
-              jako položka v lednici z předchozí otázky. Funkce
-              <code>FridgeItem</code> na základě údajů v objektu vrátí nově
-              vytvořený DOM element s náledující strukturou.
+              Vytvořte pole objektů odpovídajících struktuře
+              <code>props</code> z předchozího cvičení, reprezentující obsah
+              lednice. Pole uložte do proměnné s názvem <code>lednice</code>.
+              Každý objekt v poli bude mít následující vlastnosti:
             </p>
 
-            <pre><code class="language-html"><!--
-          -->&lt;div class="fridge-item"&gt;
-<!--      -->  &lt;div class="fridge-item__name"&gt;Smetana&lt;/div&gt;
-<!--      -->  &lt;div class="fridge-item__type"&gt;Mléčný výrobek&lt;/div&gt;
-<!--      -->  &lt;div class="fridge-item__expr"&gt;12&lt;/div&gt;
-<!--      -->&lt;/div&gt;<!--
-          --></code></pre>
+            <ul>
+              <li><strong>name</strong>, např. máslo, rajčata</li>
+              <li><strong>type</strong>, např. mléčný výrobek, zelenina</li>
+              <li>
+                <strong>expiration</strong>, za kolik vyprší datum spotřeby
+              </li>
+            </ul>
+
+            <p>
+              Vaše pole by mělo obsahovat alespoň 5 objektů (= věcí v lednici),
+              z nichž alespoň jeden je typu zelenina.
+            </p>
           </div>
         </div>
         <div class="question__points">3 body</div>
