@@ -345,50 +345,54 @@
         <a href="#q13" class="question__num">13.</a>
         <div class="question__body">
           <div class="question__text">
-            <p>Uvažte následující React aplikaci:</p>
+            <p>Uvažte následující React komponentu:</p>
 
             <pre><code class="language-jsx"><!--
           -->import React, { useState } from 'react';
-<!--      -->import { render } from 'react-dom';
 <!--      -->
-<!--      -->const App = () => {
-<!--      -->  const [active, setActive] = useState(true);
+<!--      -->export const LightSwitch = () => {
+<!--      -->  const [isOn, setIsOn] = useState(true);
 <!--      -->
 <!--      -->  return (
 <!--      -->    &lt;button
 <!--      -->      className=&quot;btn&quot;
-<!--      -->      onClick={() => setActive(!active)}
+<!--      -->      onClick={() => setIsOn(!isOn)}
 <!--      -->    &gt;
-<!--      -->      Ok
+<!--      -->      Zhasnout
 <!--      -->    &lt;/button&gt;
 <!--      -->  );
-<!--      -->};
-<!--      -->
-<!--      -->render(&lt;App /&gt;, document.getElementById('app'));<!--
+<!--      -->};<!--
         --></code></pre>
 
             <p>
-              Aplikace při každém kliknutí na tlačítko mění hodnotu stavu
-              <code>active</code> z <code>true</code> na <code>false</code> a
-              obráceně.
+              <code>LightSwitch</code> při každém kliknutí na tlačítko mění
+              hodnotu stavu <code>isOn</code> z <code>true</code> na
+              <code>false</code> a obráceně.
             </p>
 
             <p>
               Chceme, aby se tato změna projevila vizuálně i na tlačítku.
               Předpokládejme, že v CSS máme nastylovanou třídu
-              <code>btn--active</code>. Když tuto třídu přidáme na tlačítko,
-              bude tlačítko zvýrazněné jako aktivní.
+              <code>btn&#8288;-&#8288;-&#8288;on</code>. Když tuto třídu přidáme
+              na tlačítko, bude tlačítko zvýrazněné jako zapnuté. Třídu
+              <code>btn</code> mějme na tlačítku vždy.
+            </p>
+
+            <p>
+              Zároveň chceme, aby text tlačíka byl <code>Zhasnout</code> pouze v
+              případě, že <code>isOn</code> je <code>true</code>. V opačném
+              případě nastavte tlačítku text na <code>Rozsvítit</code>.
             </p>
 
             <p>
               Upravte aplikaci uvedenou výše tak, aby se na tlačítku objevila
-              CSS třída <code>btn--active</code>, je-li stav
-              <code>active</code> nastaven na <code>true</code>. Je-li ve stavu
-              <code>active</code> hodnota <code>false</code>, třída na tlačítku
+              CSS třída <code>btn&#8288;-&#8288;-&#8288;on</code>, je-li stav
+              <code>isOn</code> nastaven na <code>true</code>. Je-li ve stavu
+              <code>isOn</code> hodnota <code>false</code>, třída na tlačítku
               nebude.
             </p>
 
-            <p>Jako řešení stačí poslat kód komponenty <code>App</code>.</p>
+            <p>Jako řešení pošlete kód komponenty <code>LightSwitch</code>.</p>
           </div>
         </div>
         <div class="question__points">3 body</div>
