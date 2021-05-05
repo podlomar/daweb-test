@@ -229,19 +229,16 @@
         <a href="#q08" class="question__num">8.</a>
         <div class="question__body">
           <div class="question__text">
-            <p>
-              Označte všechny možnosti, které vystihují možná použití nástroje
-              Webpack.
-            </p>
+            <p>Označte všechny možnosti, na co jde Webpack použít.</p>
 
             <ol class="question__answers" type="A">
               <li>Sestavení projektu do produkční podoby</li>
-              <li>Hostování vašeho projektu na internetu</li>
+              <li>Zveřejnění projektu na internet</li>
               <li>
                 Zabalení JavaScriptových zdrojových kódů do jednoho výsledného
                 souboru.
               </li>
-              <li>Zapojení Reactu do vašeho projektu.</li>
+              <li>Zapojení Reactu do projektu.</li>
             </ol>
           </div>
         </div>
@@ -253,16 +250,42 @@
         <div class="question__body">
           <div class="question__text">
             <p>
-              Vytvořte pole objektů, reprezentující obsah lednice. Pole uložte
-              do proměnné s názvem <code>lednice</code>. Každý objekt v poli
-              bude mít následující vlastnosti:
+              Vytvořte v čistém JavaScriptu komponentu <code>FridgeItem</code>,
+              která jako vstupní parametr přijímá objekt <code>props</code> s
+              třemi vlastnostmi: <code>name</code>, <code>type</code> a
+              <code>expiration</code>. Funkce <code>FridgeItem</code> na základě
+              údajů v objektu vrátí nově vytvořený DOM element s náledující
+              strukturou.
+            </p>
+
+            <pre><code class="language-html"><!--
+          -->&lt;div class="fridge-item"&gt;
+<!--      -->  &lt;div class="fridge-item__name"&gt;Smetana&lt;/div&gt;
+<!--      -->  &lt;div class="fridge-item__type"&gt;Mléčný výrobek&lt;/div&gt;
+<!--      -->  &lt;div class="fridge-item__expiration"&gt;12&lt;/div&gt;
+<!--      -->&lt;/div&gt;<!--
+          --></code></pre>
+          </div>
+        </div>
+        <div class="question__points">3 body</div>
+      </div>
+
+      <div id="q10" class="question">
+        <a href="#q10" class="question__num">10.</a>
+        <div class="question__body">
+          <div class="question__text">
+            <p>
+              Vytvořte pole objektů reprezentující obsah lednice. Objekty v poli
+              budou odpovídat struktuře <code>props</code> z předchozího
+              cvičení. Pole uložte do proměnné s názvem <code>lednice</code>.
+              Každý objekt v poli bude mít následující vlastnosti:
             </p>
 
             <ul>
-              <li><strong>název</strong>, např. máslo, rajčata</li>
-              <li><strong>typ</strong>, např. mléčný výrobek, zelenina</li>
+              <li><strong>name</strong>, např. máslo, rajčata</li>
+              <li><strong>type</strong>, např. mléčný výrobek, zelenina</li>
               <li>
-                <strong>počet dnů</strong>, za kolik vyprší datum spotřeby
+                <strong>expiration</strong>, za kolik vyprší datum spotřeby
               </li>
             </ul>
 
@@ -275,37 +298,13 @@
         <div class="question__points">3 body</div>
       </div>
 
-      <div id="q10" class="question">
-        <a href="#q10" class="question__num">10.</a>
-        <div class="question__body">
-          <div class="question__text">
-            <p>
-              Vytvořte v čistém JavaScriptu komponentu <code>FridgeItem</code>,
-              která jako vstup bere <code>props</code> se stejnou strukturou
-              jako položka v lednici z předchozí otázky. Funkce
-              <code>FridgeItem</code> na základě údajů v objektu vrátí nově
-              vytvořený DOM element s náledující strukturou.
-            </p>
-
-            <pre><code class="language-html"><!--
-          -->&lt;div class="fridge-item"&gt;
-<!--      -->  &lt;div class="fridge-item__name"&gt;Smetana&lt;/div&gt;
-<!--      -->  &lt;div class="fridge-item__type"&gt;Mléčný výrobek&lt;/div&gt;
-<!--      -->  &lt;div class="fridge-item__expr"&gt;12&lt;/div&gt;
-<!--      -->&lt;/div&gt;<!--
-          --></code></pre>
-          </div>
-        </div>
-        <div class="question__points">3 body</div>
-      </div>
-
       <div id="q11" class="question">
         <a href="#q11" class="question__num">11.</a>
         <div class="question__body">
           <div class="question__text">
             <p>
-              Napište krátký kód, který ze serveru na adrese uvedené níže získá
-              JSON data s podrobnostmi o České republice:
+              Napište kód, který ze serveru na adrese uvedené níže získá JSON
+              data s podrobnostmi o České republice:
             </p>
 
             <pre><code class="language-html">https://restcountries.eu/rest/v2/alpha/cz</code></pre>
@@ -347,50 +346,54 @@
         <a href="#q13" class="question__num">13.</a>
         <div class="question__body">
           <div class="question__text">
-            <p>Uvažte následující React aplikaci:</p>
+            <p>Uvažte následující React komponentu:</p>
 
             <pre><code class="language-jsx"><!--
           -->import React, { useState } from 'react';
-<!--      -->import { render } from 'react-dom';
 <!--      -->
-<!--      -->const App = () => {
-<!--      -->  const [active, setActive] = useState(true);
+<!--      -->export const LightSwitch = () => {
+<!--      -->  const [isOn, setIsOn] = useState(true);
 <!--      -->
 <!--      -->  return (
 <!--      -->    &lt;button
 <!--      -->      className=&quot;btn&quot;
-<!--      -->      onClick={() => setActive(!active)}
+<!--      -->      onClick={() => setIsOn(!isOn)}
 <!--      -->    &gt;
-<!--      -->      Ok
+<!--      -->      Zhasnout
 <!--      -->    &lt;/button&gt;
 <!--      -->  );
-<!--      -->};
-<!--      -->
-<!--      -->render(&lt;App /&gt;, document.getElementById('app'));<!--
+<!--      -->};<!--
         --></code></pre>
 
             <p>
-              Aplikace při každém kliknutí na tlačítko mění hodnotu stavu
-              <code>active</code> z <code>true</code> na <code>false</code> a
-              obráceně.
+              <code>LightSwitch</code> při každém kliknutí na tlačítko mění
+              hodnotu stavu <code>isOn</code> z <code>true</code> na
+              <code>false</code> a obráceně.
             </p>
 
             <p>
               Chceme, aby se tato změna projevila vizuálně i na tlačítku.
               Předpokládejme, že v CSS máme nastylovanou třídu
-              <code>btn--active</code>. Když tuto třídu přidáme na tlačítko,
-              bude tlačítko zvýrazněné jako aktivní.
+              <code>btn&#8288;-&#8288;-&#8288;on</code>. Když tuto třídu přidáme
+              na tlačítko, bude tlačítko zvýrazněné jako zapnuté. Třídu
+              <code>btn</code> mějme na tlačítku vždy.
+            </p>
+
+            <p>
+              Zároveň chceme, aby text tlačíka byl <code>Zhasnout</code> pouze v
+              případě, že <code>isOn</code> je <code>true</code>. V opačném
+              případě nastavte tlačítku text na <code>Rozsvítit</code>.
             </p>
 
             <p>
               Upravte aplikaci uvedenou výše tak, aby se na tlačítku objevila
-              CSS třída <code>btn--active</code>, je-li stav
-              <code>active</code> nastaven na <code>true</code>. Je-li ve stavu
-              <code>active</code> hodnota <code>false</code>, třída na tlačítku
+              CSS třída <code>btn&#8288;-&#8288;-&#8288;on</code>, je-li stav
+              <code>isOn</code> nastaven na <code>true</code>. Je-li ve stavu
+              <code>isOn</code> hodnota <code>false</code>, třída na tlačítku
               nebude.
             </p>
 
-            <p>Jako řešení stačí poslat kód komponenty <code>App</code>.</p>
+            <p>Jako řešení pošlete kód komponenty <code>LightSwitch</code>.</p>
           </div>
         </div>
         <div class="question__points">3 body</div>
