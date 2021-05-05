@@ -35,17 +35,36 @@
         <a href="#q01" class="question__num">1.</a>
         <div class="question__body">
           <div class="question__text">
-            Na stránce máme pod sebou dva blokové prvky. Horní má nastavený
-            <code>margin-bottom: 30px</code>, spodní má nastavený
-            <code>margin-top: 50px</code>. Jaký bude mezi prvky vertikální
-            rozestup?
+            Určete, jakou barvu bude mít prvek po <em>najetí myši</em> pro
+            následující HTML:
+            <pre><code class="language-html"><!--
+          -->&lt;h1 id="uvod" class="nadpis"&gt;Můj web&lt;/h1&gt;<!--
+          --></code></pre>
+
+            a CSS:
+            <pre><code class="language-css"><!--
+            -->#uvod {
+<!--      -->  color: #FF0000;
+<!--      -->}
+<!--      -->#uvod .nadpis {
+<!--      -->  color: #00FF00;
+<!--      -->  background-color: #00FF00 !important;
+<!--      -->}
+<!--      -->.nadpis:hover {
+<!--      -->  color: #0000FF;
+<!--      -->  background-color: #0000FF;
+<!--      -->}
+<!--      -->h1.nadpis {
+<!--      -->  background-color: #FF0000;
+<!--      -->}<!--
+          --></code></pre>
           </div>
 
           <ol class="question__answers" type="A">
-            <li>30px</li>
-            <li>50px</li>
-            <li>80px</li>
-            <li>20px</li>
+            <li>modrý text na zeleném pozadí</li>
+            <li>červený text na modrém pozadí</li>
+            <li>modrý text na červeném pozadí</li>
+            <li>červený text na zeleném pozadí</li>
           </ol>
         </div>
         <div class="question__points">2 body</div>
@@ -57,17 +76,20 @@
           <div class="question__text">
             <p>Předpokládejte, že máme následující HTML strukturu:</p>
             <pre><code class="language-html"><!--
-          -->&lt;div class="container"&gt;
-<!--      -->  &lt;div class="title"&gt;Titulek&lt;/div&gt;
+          -->&lt;div class="box"&gt;
+<!--      -->  &lt;h2&gt;Kontakt&lt;/h2&gt;
+<!--      -->  &lt;a href="mailto:info@czechitas.cz"&gt;info@czechitas.cz&lt;/a&gt;&lt;br&gt;
+<!--      -->  &lt;a href="https://www.czechitas.cz/cs/kontakt"&gt;www.czechitas.cz&lt;/a&gt;
+<!--      -->  &lt;button class="close"&gt;×&lt;/button&gt;
 <!--      -->&lt;/div&gt;<!--
           --></code></pre>
 
             <p>
-              Jaké CSS styly musíme nastavit třídám <code>container</code> a
-              <code>title</code>, abychom prvek <code>.title</code> mohli
-              absolutně napozicovat? Prvek <code>.title</code> chceme mít 150px
-              od levého okraje a 80px od horního okraje prvku
-              <code>.container</code>.
+              Nastylujte třídu <code>box</code> tak, aby měla kolem sebe černý
+              rámeček o tloušťce <code>5px</code> a vnitřní obsah byl od něj
+              odsazený o <code>20px</code>. Napozicujte <code>close</code> do
+              pravého horního rohu boxu tak, aby byl nalepený na vnitřní okraje
+              rámečku.
             </p>
           </div>
         </div>
@@ -78,9 +100,9 @@
         <a href="#q03" class="question__num">3.</a>
         <div class="question__body">
           <div class="question__text">
-            Vytváříme responzivní stránku. Jakým zápisem v CSS zajístíte, že
-            určitá část CSS bude platit pouze pro šířku okna prohlížeče rovnu
-            720 pixelů a větší?
+            Napište CSS, které prvkům s třídou <code>nadpis</code> nastaví
+            velikost písma na <code>1.5rem</code> a na větších obrazovkách
+            širokých aspoň 720 pixelů na <code>2rem</code>.
           </div>
         </div>
         <div class="question__points">3 body</div>
@@ -93,9 +115,16 @@
             <p>Mějme následující HTML strukturu:</p>
             <pre><code class="language-html"><!--
           -->&lt;div class="row"&gt;
-<!--      -->  &lt;div class="column"&gt;sloupec 1&lt;/div&gt;
-<!--      -->  &lt;div class="column"&gt;sloupec 2&lt;/div&gt;
-<!--      -->  &lt;div class="column"&gt;sloupec 3&lt;/div&gt;
+<!--      -->  &lt;div class="column"&gt;
+<!--      -->    První sloupeček
+<!--      -->  &lt;/div&gt;
+<!--      -->  &lt;div class="column"&gt;
+<!--      -->    Druhý
+<!--      -->  &lt;/div&gt;
+<!--      -->  &lt;div class="column"&gt;
+<!--      -->    A úplně&lt;br&gt;
+<!--      -->    poslední sloupeček
+<!--      -->  &lt;/div&gt;
 <!--      -->&lt;/div&gt;<!--
           --></code></pre>
 
@@ -106,10 +135,7 @@
 
             <ol>
               <li>byly horizontálně vedle sebe,</li>
-              <li>
-                každý zabíral horizontálně stejně místa (tj. byly stejně
-                široké),
-              </li>
+              <li>každý zabíral třetinu řádku (tj. byly stejně široké),</li>
               <li>
                 byly všechny zarovnané vertikálně na střed prvku
                 <code>.row</code>.
@@ -329,7 +355,7 @@
 <!--      -->
 <!--      -->const App = () => {
 <!--      -->  const [active, setActive] = useState(true);
-<!--      -->  
+<!--      -->
 <!--      -->  return (
 <!--      -->    &lt;button
 <!--      -->      className=&quot;btn&quot;
