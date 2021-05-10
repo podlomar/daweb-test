@@ -404,32 +404,30 @@
         <div class="question__body">
           <div class="question__text">
             <p>
-              Naklonuje si
-              <a href="https://github.com/Czechitas-podklady-WEB/dadjokes"
-                >repozitář</a
+              Prohlédněte si vzorovou webovou aplikaci 
+              <a href="https://czechitas-podklady-web.github.io/dadjokes/"
+                >Dad Jokes</a
               >
-              se vzorovou webovou aplikací napsanou pomocí čistém JavaScriptu.
+              napsanou pomocí čistého JavaScriptu. Aplikace zobrazuje vtip s avatarem uživatele a dvěma tlačítky like a dislike. Vyzkoušejte si, jak tlačítka fungují.
+            </p>
+
+            <p>
+              Vaším úkolem bude vytvořit tutéž aplikaci v Reactu. 
             </p>
 
             <ol>
               <li>
-                Nainstalujte v něm všechny potřebné závislosti a sestavte
-                aplikaci.
+                Celý kód vzorové aplikace najdete v <a href="https://github.com/Czechitas-podklady-WEB/dadjokes">tomto repozitáři</a>. Repozitář si naklonujte na váš počítač a prohlédněte si kód aplikace.
               </li>
 
               <li>
-                Vykoušejte si, jak aplikace funguje. Prohlédněte si její
-                zdrojový kód.
+                Pod svým GitHub účtem vytvořte repozitář s názvem
+                <code>dadjokes-react</code>. Repozitář si naklonujte do počítače a vytvořenou složku si otevřete ve VS Code.
               </li>
 
               <li>
-                Vytvořte pod svým GitHub účtem repozitář s názvem
-                <code>dadjokes</code> a založte v něm novou Reactovou aplikaci
-                podle
-                <a
-                  href="https://github.com/Czechitas-podklady-WEB/project-starter/archive/react-starter.zip"
-                  >šablony</a
-                >, kterou již dobře znáte z kurzu.
+                Ve VS Code otevřete terminál a vytvořte uvnitř složky novou React aplikaci pomocí příkazu
+                <pre><code class="language-sh">$ npx create-czechitas-app .</code></pre>
               </li>
 
               <li>
@@ -460,7 +458,7 @@
                 Vytvořte komponentu <code>Joke</code>, která zobrazuje jeden
                 vtip. Tato komponenta bude sídlit ve vlastní složce se všemi
                 potřebnými CSS styly a obrázky. Komponenta
-                <code>Joke</code> nechť má pět props: <code>userId</code>,
+                <code>Joke</code> nechť má pět props: <code>userAvatar</code>,
                 <code>userName</code>, <code>text</code>, <code>likes</code>,
                 <code>dislikes</code>.
               </li>
@@ -471,6 +469,9 @@
                   >jokes.js</a
                 >. Zobrazte každý vtip z pole pomocí komponenty
                 <code>Joke</code>.
+              </li>
+              <li>
+                Zvažte, která vlastnost ze zobrazovaných dat se nejlépe hodí pro <code>key</code> prop vaší komponenty a použijte ji jako <code>key</code>.
               </li>
             </ol>
 
