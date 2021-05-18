@@ -35,38 +35,36 @@
         <a href="#q01" class="question__num">1.</a>
         <div class="question__body">
           <div class="question__text">
-            Určete, jakou barvu pozadí bude mít tlačítko s nápisem
-            <em>E-mail us!</em> pro následující HTML:
+            Určete, jakou barvu bude mít prvek po <em>najetí myši</em> pro
+            následující HTML:
             <pre><code class="language-html"><!--
-            -->   &lt;section class="footer"&gt;
-  <!--      -->  &lt;div class="contacts"&gt;
-  <!--      -->   &lt;button class="email"&gt;E-mail us!&lt;/button&gt;
-  <!--      -->  &lt;/div&gt;
-  <!--      --> &lt;/section&gt;<!--
-            --></code></pre>
+          -->&lt;h1 id="uvod" class="nadpis"&gt;Můj web&lt;/h1&gt;<!--
+          --></code></pre>
 
             a CSS:
             <pre><code class="language-css"><!--
-            -->section .email {
-<!--      -->  background-color: blue;
+            -->#uvod {
+<!--      -->  color: #FF0000;
 <!--      -->}
-<!--      -->.contacts .email {
-<!--      -->  background-color: yellow;
+<!--      -->#uvod .nadpis {
+<!--      -->  color: #00FF00;
+<!--      -->  background-color: #00FF00 !important;
 <!--      -->}
-<!--      -->div.contacts button {
-<!--      -->  background-color: green;
+<!--      -->.nadpis:hover {
+<!--      -->  color: #0000FF;
+<!--      -->  background-color: #0000FF;
 <!--      -->}
-<!--      -->section button.email {
-<!--      -->  background-color: pink;
+<!--      -->h1.nadpis {
+<!--      -->  background-color: #FF0000;
 <!--      -->}<!--
           --></code></pre>
           </div>
 
           <ol class="question__answers" type="A">
-            <li>modrou</li>
-            <li>žlutou</li>
-            <li>zelenou</li>
-            <li>růžovou</li>
+            <li>modrý text na zeleném pozadí</li>
+            <li>červený text na modrém pozadí</li>
+            <li>modrý text na červeném pozadí</li>
+            <li>červený text na zeleném pozadí</li>
           </ol>
         </div>
         <div class="question__points">4 body</div>
