@@ -35,36 +35,38 @@
         <a href="#q01" class="question__num">1.</a>
         <div class="question__body">
           <div class="question__text">
-            Určete, jakou barvu bude mít prvek po <em>najetí myši</em> pro
-            následující HTML:
+            Určete, jakou barvu pozadí bude mít tlačítko s nápisem
+            <em>E-mail us!</em> pro následující HTML:
             <pre><code class="language-html"><!--
-          -->&lt;h1 id="uvod" class="nadpis"&gt;Můj web&lt;/h1&gt;<!--
+          -->&lt;section class="footer"&gt;
+<!--      -->  &lt;div class="contacts"&gt;
+<!--      -->    &lt;button class="email"&gt;E-mail us!&lt;/button&gt;
+<!--      -->  &lt;/div&gt;
+<!--      -->&lt;/section&gt;<!--
           --></code></pre>
 
             a CSS:
             <pre><code class="language-css"><!--
-            -->#uvod {
-<!--      -->  color: #FF0000;
+          -->section .email {
+<!--      -->  background-color: blue;
 <!--      -->}
-<!--      -->#uvod .nadpis {
-<!--      -->  color: #00FF00;
-<!--      -->  background-color: #00FF00 !important;
+<!--      -->.contacts .email {
+<!--      -->  background-color: yellow;
 <!--      -->}
-<!--      -->.nadpis:hover {
-<!--      -->  color: #0000FF;
-<!--      -->  background-color: #0000FF;
+<!--      -->div.contacts button {
+<!--      -->  background-color: green;
 <!--      -->}
-<!--      -->h1.nadpis {
-<!--      -->  background-color: #FF0000;
+<!--      -->section button.email {
+<!--      -->  background-color: pink;
 <!--      -->}<!--
           --></code></pre>
           </div>
 
           <ol class="question__answers" type="A">
-            <li>modrý text na zeleném pozadí</li>
-            <li>červený text na modrém pozadí</li>
-            <li>modrý text na červeném pozadí</li>
-            <li>červený text na zeleném pozadí</li>
+            <li>modrou</li>
+            <li>žlutou</li>
+            <li>zelenou</li>
+            <li>růžovou</li>
           </ol>
         </div>
         <div class="question__points">4 body</div>
@@ -206,29 +208,6 @@
         <a href="#q07" class="question__num">7.</a>
         <div class="question__body">
           <div class="question__text">
-            <p>
-              Napište funkci <code>cutoff</code>, která na vstupu obdrží pole
-              čísel <code>numbers</code> a číslo <code>max</code>. Tato funkce
-              projde vstupní pole a všechna čísla, která jsou větší než hodnota
-              <code>max</code>, nahradí v poli přímo hodnotou <code>max</code>.
-              Funkce výsledné pole vrátí jako svůj výstup.
-            </p>
-
-            <p>Ukázka použití funkce v konzoli</p>
-
-            <pre><code class="language-js"><!--
-          -->cutoff([8, 2, 5, 9, 7, 1, 6, 10], 6)
-<!--      -->// [6, 2, 5, 6, 6, 1, 6, 6]<!--
-          --></code></pre>
-          </div>
-        </div>
-        <div class="question__points">6 bodů</div>
-      </div>
-
-      <div id="q08" class="question">
-        <a href="#q08" class="question__num">8.</a>
-        <div class="question__body">
-          <div class="question__text">
             <p>Označte všechny možnosti, na co jde Webpack použít.</p>
 
             <ol class="question__answers" type="A">
@@ -245,8 +224,8 @@
         <div class="question__points">4 body</div>
       </div>
 
-      <div id="q09" class="question">
-        <a href="#q09" class="question__num">9.</a>
+      <div id="q08" class="question">
+        <a href="#q08" class="question__num">8.</a>
         <div class="question__body">
           <div class="question__text">
             <p>
@@ -270,8 +249,8 @@
         <div class="question__points">6 bodů</div>
       </div>
 
-      <div id="q10" class="question">
-        <a href="#q10" class="question__num">10.</a>
+      <div id="q09" class="question">
+        <a href="#q09" class="question__num">9.</a>
         <div class="question__body">
           <div class="question__text">
             <p>
@@ -293,6 +272,58 @@
               Vaše pole by mělo obsahovat alespoň 5 objektů (= věcí v lednici),
               z nichž alespoň jeden je typu zelenina.
             </p>
+          </div>
+        </div>
+        <div class="question__points">6 bodů</div>
+      </div>
+
+      <div id="q10" class="question">
+        <a href="#q10" class="question__num">10.</a>
+        <div class="question__body">
+          <div class="question__text">
+            <p>
+              Z <code>handbags</code> pomocí metody na poli udělejte pole nové,
+              uložte si ho do proměnné <code>midRangeHandbags</code> a vypište
+              do konzole. Nové pole musí obsahovat všechny kabelky, které jsou
+              dražší než 10.000 a zároveň levnější než 100.000.
+            </p>
+
+            <pre><code class="language-js"><!--
+          -->const handbags = [
+<!--      -->  {
+<!--      -->    brand: 'Guess'
+<!--      -->    price: 3600,
+<!--      -->  },
+<!--      -->  {
+<!--      -->    brand: 'Chanel'
+<!--      -->    price: 225000,
+<!--      -->  },
+<!--      -->  {
+<!--      -->    brand: 'Prada'
+<!--      -->    price: 65000,
+<!--      -->  },
+<!--      -->  {
+<!--      -->    brand: 'Zara'
+<!--      -->    price: 1200,
+<!--      -->  },
+<!--      -->  {
+<!--      -->    brand: 'Louis Vuitton'
+<!--      -->    price: 80000,
+<!--      -->  },
+<!--      -->  {
+<!--      -->    brand: 'Hermès'
+<!--      -->    price: 607000,
+<!--      -->  },
+<!--      -->  {
+<!--      -->    brand: 'Saint Laurent'
+<!--      -->    price: 54000,
+<!--      -->  },
+<!--      -->  {
+<!--      -->    brand: 'F&F'
+<!--      -->    price: 400,
+<!--      -->  }
+<!--      -->];<!--
+          --></code></pre>
           </div>
         </div>
         <div class="question__points">6 bodů</div>
@@ -404,29 +435,34 @@
         <div class="question__body">
           <div class="question__text">
             <p>
-              Prohlédněte si vzorovou webovou aplikaci 
+              Prohlédněte si vzorovou webovou aplikaci
               <a href="https://czechitas-podklady-web.github.io/dadjokes/"
                 >Dad Jokes</a
               >
-              napsanou pomocí čistého JavaScriptu. Aplikace zobrazuje vtip s avatarem uživatele a dvěma tlačítky like a dislike. Vyzkoušejte si, jak tlačítka fungují.
+              napsanou pomocí čistého JavaScriptu. Aplikace zobrazuje vtip s
+              avatarem uživatele a dvěma tlačítky like a dislike. Vyzkoušejte
+              si, jak tlačítka fungují.
             </p>
 
-            <p>
-              Vaším úkolem bude vytvořit tutéž aplikaci v Reactu. 
-            </p>
+            <p>Vaším úkolem bude vytvořit tutéž aplikaci v Reactu.</p>
 
             <ol>
               <li>
-                Celý kód vzorové aplikace najdete v <a href="https://github.com/Czechitas-podklady-WEB/dadjokes">tomto repozitáři</a>. Na GitHubu si prohlédněte kód aplikace.
+                Celý kód vzorové aplikace najdete v 
+                <a href="https://github.com/Czechitas-podklady-WEB/dadjokes"
+                  >tomto repozitáři</a
+                >. Na GitHubu si prohlédněte kód aplikace.
               </li>
 
               <li>
                 Pod svým GitHub účtem vytvořte repozitář s názvem
-                <code>dadjokes-react</code>. Repozitář si naklonujte do počítače a vytvořenou složku si otevřete ve VS Code.
+                <code>dadjokes-react</code>. Repozitář si naklonujte do počítače
+                a vytvořenou složku si otevřete ve VS Code.
               </li>
 
               <li>
-                Ve VS Code otevřete terminál a vytvořte uvnitř složky novou React aplikaci pomocí příkazu
+                Ve VS Code otevřete terminál a vytvořte uvnitř složky novou
+                React aplikaci pomocí příkazu
                 <pre><code class="language-sh">$ npx create-czechitas-app .</code></pre>
               </li>
 
@@ -456,7 +492,7 @@
             <ol>
               <li>
                 Vytvořte komponentu <code>Joke</code>, která zobrazuje jeden
-                vtip. Tato komponenta bude sídlit ve vlastní složce se všemi
+                vtip. Tato komponenta bude sídlet ve vlastní složce se všemi
                 potřebnými CSS styly a obrázky. Komponenta
                 <code>Joke</code> nechť má pět props: <code>userAvatar</code>,
                 <code>userName</code>, <code>text</code>, <code>likes</code>,
@@ -465,13 +501,15 @@
               <li>
                 V hlavním souboru projektu importujte pole objektů ze souboru
                 <a
-                  href="https://raw.githubusercontent.com/Czechitas-podklady-WEB/daweb-test/main//jokes.js"
+                  href="https://raw.githubusercontent.com/Czechitas-podklady-WEB/daweb-test/main/jokes.js"
                   >jokes.js</a
                 >. Zobrazte každý vtip z pole pomocí komponenty
                 <code>Joke</code>.
               </li>
               <li>
-                Zvažte, která vlastnost ze zobrazovaných dat se nejlépe hodí pro <code>key</code> prop vaší komponenty a použijte ji jako <code>key</code>.
+                Zvažte, která vlastnost ze zobrazovaných dat se nejlépe hodí pro
+                <code>key</code> prop vaší komponenty a použijte ji jako
+                <code>key</code>.
               </li>
             </ol>
 
@@ -484,7 +522,7 @@
 
             <p>
               Pushněte svoje změny do repozitáře. Jako odpověď na tuto otázku
-              opět uveďte stejnou adresu svého GitHub projektu, jako jste uvadli
+              opět uveďte stejnou adresu svého GitHub projektu, jako jste uvedli
               v předchozí otázce.
             </p>
           </div>
