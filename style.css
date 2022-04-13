@@ -48,6 +48,10 @@ body {
   grid-column: -1 / 1;
 }
 
+.screenshot {
+  max-width: 100%;
+}
+
 @media (min-width: 600px) {
   .question__num {
     font-size: 3em;
