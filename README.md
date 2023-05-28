@@ -4,4 +4,4 @@ Záveřečný test pro DA Web
 
 ## Nasazení
 
-Pushnutím do větve `deploy` se změny automaticky zveření na Netlify.
+Pushnutím do větve `deploy` se změny automaticky zveření pomocí GitHub Pages.
