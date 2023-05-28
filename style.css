@@ -9,7 +9,14 @@ html {
 }
 
 body {
-  color: #555;
+  color: #555555;
+  background-color: #ffffff;
+}
+@media (prefers-color-scheme: dark) {
+  body {
+    color: #ffffff;
+    background-color: #121212;
+  }
 }
 
 .container {
@@ -35,6 +42,11 @@ body {
   text-decoration: none;
   text-align: right;
   margin-right: 0.3em;
+}
+@media (prefers-color-scheme: dark) {
+  .question__num {
+    color: #bdc1c6;
+  }
 }
 
 .question__num:hover {
