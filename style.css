@@ -88,10 +88,6 @@ p {
   margin: 0 0 1rem 0;
 }
 
-.correct {
-  background-color: yellow;
-}
-
 h1, h2 {
   display: flex;
   justify-content: space-between;
