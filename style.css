@@ -30,6 +30,7 @@ body {
   align-items: flex-start;
   line-height: 150%;
   margin-bottom: 2rem;
+  scroll-margin-top: 2rem;
 }
 
 .question__body {
