@@ -313,14 +313,13 @@
           <h3 class="question__title">Kabelky</h3>
           <div class="question__text">
             <p>
-              Z <code>handbags</code> pomocí metody na poli udělejte pole nové,
-              uložte si ho do proměnné <code>midRangeHandbags</code> a vypište
-              do konzole. Nové pole musí obsahovat všechny kabelky, které jsou
-              dražší než 10.000 a zároveň levnější než 100.000.
+              Napište JSX komponentu <code>Products</code>, která bude jako svoji 
+              <code>prop</code> očekávat pole <code>handbags</code> v následujícím
+              tvaru:
             </p>
 
             <pre><code class="language-js"><!--
-          -->const handbags = [
+          -->[
 <!--      -->  {
 <!--      -->    brand: 'Guess',
 <!--      -->    price: 3600,
@@ -333,28 +332,13 @@
 <!--      -->    brand: 'Prada',
 <!--      -->    price: 65000,
 <!--      -->  },
-<!--      -->  {
-<!--      -->    brand: 'Zara',
-<!--      -->    price: 1200,
-<!--      -->  },
-<!--      -->  {
-<!--      -->    brand: 'Louis Vuitton',
-<!--      -->    price: 80000,
-<!--      -->  },
-<!--      -->  {
-<!--      -->    brand: 'Hermès',
-<!--      -->    price: 607000,
-<!--      -->  },
-<!--      -->  {
-<!--      -->    brand: 'Saint Laurent',
-<!--      -->    price: 54000,
-<!--      -->  },
-<!--      -->  {
-<!--      -->    brand: 'F&F',
-<!--      -->    price: 400,
-<!--      -->  }
+<!--      -->  // další kabelky
 <!--      -->];<!--
           --></code></pre>
+
+            <p>
+              Přepokládejte, že v poli může být libovolné množství objektů. Napište komponentu tak, aby zobrazila všechny kabelky z pole na stránce. Strukturu JSX si můžete zvolit dle svého uvážení.
+            </p>
           </div>
         </div>
         <div class="question__points">6 bodů</div>
