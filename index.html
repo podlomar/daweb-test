@@ -396,6 +396,46 @@
       <div id="q13" class="question">
         <a href="#q13" class="question__num">13.</a>
         <div class="question__body">
+          <h3 class="question__title">useEffect hook</h3>
+          <div class="question__text">
+            <p>Jaké je správné použití useEffect hooku?</p>
+
+            <ol class="question__answers" type="A">
+              <li>
+                <pre><code class="language-js"><!--
+              -->const useEffect = () => {
+<!--          -->  console.log("Hello!")
+<!--          -->}<!--
+              --></code></pre>
+              </li>
+              <li>
+                <pre><code class="language-js"><!--
+              -->const [consoleLog, setConsoleLog] = useEffect("Hello!")<!--
+              --></code></pre>
+              </li>
+              <li>
+                <pre><code class="language-js"><!--
+              -->useEffect(() => {
+<!--          -->  console.log("Hello!")
+<!--          -->}, [])<!--
+              --></code></pre>
+              </li>
+              <li>
+                <pre><code class="language-js"><!--
+              -->useEffect(
+<!--          -->  console.log("Hello!", [])
+<!--          -->)<!--
+              --></code></pre>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="question__points">4 body</div>
+      </div>
+
+      <div id="q14" class="question">
+        <a href="#q14" class="question__num">14.</a>
+        <div class="question__body">
           <h3 class="question__title">Vypínač světla</h3>
           <div class="question__text">
             <p>Uvažte následující React komponentu:</p>
@@ -451,8 +491,8 @@
         <div class="question__points">6 bodů</div>
       </div>
 
-      <div id="q14" class="question">
-        <a href="#q14" class="question__num">14.</a>
+      <div id="q15" class="question">
+        <a href="#q15" class="question__num">15.</a>
         <div class="question__body">
           <h3 class="question__title">Vtip</h3>
           <div class="question__text">
@@ -505,8 +545,8 @@
         <div class="question__points">12 bodů</div>
       </div>
 
-      <div id="q15" class="question">
-        <a href="#q15" class="question__num">15.</a>
+      <div id="q16" class="question">
+        <a href="#q16" class="question__num">16.</a>
         <div class="question__body">
           <h3 class="question__title">Pokračování vtipu</h3>
           <div class="question__text">
@@ -551,46 +591,6 @@
           </div>
         </div>
         <div class="question__points">12 bodů</div>
-      </div>
-
-      <div id="q16" class="question">
-        <a href="#q16" class="question__num">16.</a>
-        <div class="question__body">
-          <h3 class="question__title">useEffect hook</h3>
-          <div class="question__text">
-            <p>Jaké je správné použití useEffect hooku?</p>
-
-            <ol class="question__answers" type="A">
-              <li>
-                <pre><code class="language-js"><!--
-              -->useEffect(() => {
-<!--          -->  console.log("Hello!")
-<!--          -->}, [])<!--
-              --></code></pre>
-              </li>
-              <li>
-                <pre><code class="language-js"><!--
-              -->const useEffect = () => {
-<!--          -->  console.log("Hello!")
-<!--          -->}<!--
-              --></code></pre>
-              </li>
-              <li>
-                <pre><code class="language-js"><!--
-              -->const [consoleLog, setConsoleLog] = useEffect("Hello!")<!--
-              --></code></pre>
-              </li>
-              <li>
-                <pre><code class="language-js"><!--
-              -->useEffect(
-<!--          -->  console.log("Hello!", [])
-<!--          -->)<!--
-              --></code></pre>
-              </li>
-            </ol>
-          </div>
-        </div>
-        <div class="question__points">4 body</div>
       </div>
 
       <!-- <div id="q17" class="question">
