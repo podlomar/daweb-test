@@ -525,14 +525,15 @@
               <li>
                 Ve VS Code otevřete terminál a vytvořte uvnitř složky novou
                 React aplikaci pomocí příkazu
-                <pre><code class="language-sh">npm init kodim-app@latest .</code></pre>
+                <pre><code class="language-sh">npm init kodim-app@latest . react</code></pre>
               </li>
 
               <li>
                 Naprogramujte vaši Reactovou aplikaci tak, aby dělala přesně
                 totéž a vypadala přesně stejně, jako vzorová aplikace. Stačí
-                vytvořit jednu komponentu <code>App</code>. Ze vzorové aplikace
-                můžete vykrást libovolný kód, který se vám bude v Reactu hodit.
+                mít jednu komponentu <code>HomePage</code>, zatím nemusíte
+                vytvářet žádné další. Ze vzorové aplikace můžete vykrást
+                libovolný kód, který se vám bude v Reactu hodit.
               </li>
 
               <li>
@@ -555,18 +556,19 @@
             <ol>
               <li>
                 Vytvořte komponentu <code>Joke</code>, která zobrazuje jeden
-                vtip. Tato komponenta bude sídlet ve vlastní složce se všemi
+                vtip. Tato komponenta bude sídlit ve vlastní složce se všemi
                 potřebnými CSS styly a obrázky. Komponenta
                 <code>Joke</code> nechť má pět props: <code>userAvatar</code>,
                 <code>userName</code>, <code>text</code>, <code>likes</code>,
                 <code>dislikes</code>.
               </li>
               <li>
-                V hlavním souboru projektu importujte pole objektů ze souboru
+                Pomocí <code>jsonhost</code> vytvořte API endpoint, který bude vracet 
+                data z JSON souboru
                 <a
-                  href="https://raw.githubusercontent.com/Czechitas-podklady-WEB/daweb-test/main/jokes.js"
-                  >jokes.js</a
-                >. Zobrazte každý vtip z pole pomocí komponenty
+                  href="https://raw.githubusercontent.com/Czechitas-podklady-WEB/daweb-test/main/jokes.json"
+                  >jokes.json</a
+                >. Zobrazte každý vtip z tohoto enpointu pomocí komponenty
                 <code>Joke</code>.
               </li>
               <li>
