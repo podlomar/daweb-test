@@ -255,12 +255,12 @@
           <h3 class="question__title">Komponenta FridgeItem</h3>
           <div class="question__text">
             <p>
-              Vytvořte v čistém JavaScriptu komponentu <code>FridgeItem</code>,
-              která jako vstupní parametr přijímá objekt <code>props</code> s
+              Napište JSX komponentu <code>FridgeItem</code>,
+              která jako vstupní parametr přijímá <code>props</code> s
               třemi vlastnostmi: <code>name</code>, <code>type</code> a
               <code>expiration</code>. Funkce <code>FridgeItem</code> na základě
-              údajů v objektu vrátí nově vytvořený DOM element s náledující
-              strukturou.
+              údajů v <code>props</code> vrátí takové JSX, aby se při použití 
+              komponenty do stránky vložil následující HTML kód:
             </p>
 
             <pre><code class="language-html"><!--
@@ -313,14 +313,13 @@
           <h3 class="question__title">Kabelky</h3>
           <div class="question__text">
             <p>
-              Z <code>handbags</code> pomocí metody na poli udělejte pole nové,
-              uložte si ho do proměnné <code>midRangeHandbags</code> a vypište
-              do konzole. Nové pole musí obsahovat všechny kabelky, které jsou
-              dražší než 10.000 a zároveň levnější než 100.000.
+              Napište JSX komponentu <code>Products</code>, která bude jako svoji 
+              <code>prop</code> očekávat pole <code>handbags</code> v následujícím
+              tvaru:
             </p>
 
             <pre><code class="language-js"><!--
-          -->const handbags = [
+          -->[
 <!--      -->  {
 <!--      -->    brand: 'Guess',
 <!--      -->    price: 3600,
@@ -333,28 +332,13 @@
 <!--      -->    brand: 'Prada',
 <!--      -->    price: 65000,
 <!--      -->  },
-<!--      -->  {
-<!--      -->    brand: 'Zara',
-<!--      -->    price: 1200,
-<!--      -->  },
-<!--      -->  {
-<!--      -->    brand: 'Louis Vuitton',
-<!--      -->    price: 80000,
-<!--      -->  },
-<!--      -->  {
-<!--      -->    brand: 'Hermès',
-<!--      -->    price: 607000,
-<!--      -->  },
-<!--      -->  {
-<!--      -->    brand: 'Saint Laurent',
-<!--      -->    price: 54000,
-<!--      -->  },
-<!--      -->  {
-<!--      -->    brand: 'F&F',
-<!--      -->    price: 400,
-<!--      -->  }
+<!--      -->  // další kabelky
 <!--      -->];<!--
           --></code></pre>
+
+            <p>
+              Přepokládejte, že v poli může být libovolné množství objektů. Napište komponentu tak, aby zobrazila všechny kabelky z pole na stránce. Strukturu JSX si můžete zvolit dle svého uvážení.
+            </p>
           </div>
         </div>
         <div class="question__points">6 bodů</div>
@@ -394,17 +378,18 @@
       <div id="q12" class="question">
         <a href="#q12" class="question__num">12.</a>
         <div class="question__body">
-          <h3 class="question__title">JSX</h3>
+          <h3 class="question__title">Komunikace rodič &rarr; dítě</h3>
           <div class="question__text">
-            <p>K čemu v Reactu slouží takzvané JSX?</p>
+            <p>
+              Jakým způsobem v Reactu předá rodičovská komponenta data do své
+              dceřiné komponenty?
+            </p>
 
             <ol class="question__answers" type="A">
-              <li>Jde o náhradu za CSS styly.</li>
-              <li>
-                Jde o způsob, jak zapisovat HTML přímo do JavaScriptového kódu.
-              </li>
-              <li>Jde o speciální typ Reactového efektu.</li>
-              <li>Jde o bundlovací systém nahrazující Webpack.</li>
+              <li>Zavolá funkci <code>setState</code> dítěte</li>
+              <li>Skrze <code>props</code> dítěte</li>
+              <li>Skrze callback, který zavolá samo dítě</li>
+              <li>Zavolá metodu <code>render</code></li>
             </ol>
           </div>
         </div>
@@ -413,6 +398,49 @@
 
       <div id="q13" class="question">
         <a href="#q13" class="question__num">13.</a>
+        <div class="question__body">
+          <h3 class="question__title">useEffect hook</h3>
+          <div class="question__text">
+            <p>
+              Jaké je správné použití useEffect hooku, který se spustí pouze při
+              prvním zobrazení komponenty?
+            </p>
+
+            <ol class="question__answers" type="A">
+              <li>
+                <pre><code class="language-js"><!--
+              -->const useEffect = () => {
+<!--          -->  console.log("Hello!")
+<!--          -->}<!--
+              --></code></pre>
+              </li>
+              <li>
+                <pre><code class="language-js"><!--
+              -->const [consoleLog, setConsoleLog] = useEffect("Hello!")<!--
+              --></code></pre>
+              </li>
+              <li>
+                <pre><code class="language-js"><!--
+              -->useEffect(() => {
+<!--          -->  console.log("Hello!")
+<!--          -->}, [])<!--
+              --></code></pre>
+              </li>
+              <li>
+                <pre><code class="language-js"><!--
+              -->useEffect(
+<!--          -->  console.log("Hello!", [])
+<!--          -->)<!--
+              --></code></pre>
+              </li>
+            </ol>
+          </div>
+        </div>
+        <div class="question__points">4 body</div>
+      </div>
+
+      <div id="q14" class="question">
+        <a href="#q14" class="question__num">14.</a>
         <div class="question__body">
           <h3 class="question__title">Vypínač světla</h3>
           <div class="question__text">
@@ -469,8 +497,8 @@
         <div class="question__points">6 bodů</div>
       </div>
 
-      <div id="q14" class="question">
-        <a href="#q14" class="question__num">14.</a>
+      <div id="q15" class="question">
+        <a href="#q15" class="question__num">15.</a>
         <div class="question__body">
           <h3 class="question__title">Vtip</h3>
           <div class="question__text">
@@ -503,14 +531,15 @@
               <li>
                 Ve VS Code otevřete terminál a vytvořte uvnitř složky novou
                 React aplikaci pomocí příkazu
-                <pre><code class="language-sh">npm init kodim-app@latest .</code></pre>
+                <pre><code class="language-sh">npm init kodim-app@latest . react</code></pre>
               </li>
 
               <li>
                 Naprogramujte vaši Reactovou aplikaci tak, aby dělala přesně
                 totéž a vypadala přesně stejně, jako vzorová aplikace. Stačí
-                vytvořit jednu komponentu <code>App</code>. Ze vzorové aplikace
-                můžete vykrást libovolný kód, který se vám bude v Reactu hodit.
+                mít jednu komponentu <code>HomePage</code>, zatím nemusíte
+                vytvářet žádné další. Ze vzorové aplikace můžete vykrást
+                libovolný kód, který se vám bude v Reactu hodit.
               </li>
 
               <li>
@@ -523,8 +552,8 @@
         <div class="question__points">12 bodů</div>
       </div>
 
-      <div id="q15" class="question">
-        <a href="#q15" class="question__num">15.</a>
+      <div id="q16" class="question">
+        <a href="#q16" class="question__num">16.</a>
         <div class="question__body">
           <h3 class="question__title">Pokračování vtipu</h3>
           <div class="question__text">
@@ -533,18 +562,19 @@
             <ol>
               <li>
                 Vytvořte komponentu <code>Joke</code>, která zobrazuje jeden
-                vtip. Tato komponenta bude sídlet ve vlastní složce se všemi
+                vtip. Tato komponenta bude sídlit ve vlastní složce se všemi
                 potřebnými CSS styly a obrázky. Komponenta
                 <code>Joke</code> nechť má pět props: <code>userAvatar</code>,
                 <code>userName</code>, <code>text</code>, <code>likes</code>,
                 <code>dislikes</code>.
               </li>
               <li>
-                V hlavním souboru projektu importujte pole objektů ze souboru
+                Pomocí <code>jsonhost</code> vytvořte API endpoint, který bude vracet 
+                data z JSON souboru
                 <a
-                  href="https://raw.githubusercontent.com/Czechitas-podklady-WEB/daweb-test/main/jokes.js"
-                  >jokes.js</a
-                >. Zobrazte každý vtip z pole pomocí komponenty
+                  href="https://raw.githubusercontent.com/Czechitas-podklady-WEB/daweb-test/main/jokes.json"
+                  >jokes.json</a
+                >. Zobrazte každý vtip z tohoto enpointu pomocí komponenty
                 <code>Joke</code>.
               </li>
               <li>
@@ -569,46 +599,6 @@
           </div>
         </div>
         <div class="question__points">12 bodů</div>
-      </div>
-
-      <div id="q16" class="question">
-        <a href="#q16" class="question__num">16.</a>
-        <div class="question__body">
-          <h3 class="question__title">useEffect hook</h3>
-          <div class="question__text">
-            <p>Jaké je správné použití useEffect hooku?</p>
-
-            <ol class="question__answers" type="A">
-              <li>
-                <pre><code class="language-js"><!--
-              -->useEffect(() => {
-<!--          -->  console.log("Hello!")
-<!--          -->}, [])<!--
-              --></code></pre>
-              </li>
-              <li>
-                <pre><code class="language-js"><!--
-              -->const useEffect = () => {
-<!--          -->  console.log("Hello!")
-<!--          -->}<!--
-              --></code></pre>
-              </li>
-              <li>
-                <pre><code class="language-js"><!--
-              -->const [consoleLog, setConsoleLog] = useEffect("Hello!")<!--
-              --></code></pre>
-              </li>
-              <li>
-                <pre><code class="language-js"><!--
-              -->useEffect(
-<!--          -->  console.log("Hello!", [])
-<!--          -->)<!--
-              --></code></pre>
-              </li>
-            </ol>
-          </div>
-        </div>
-        <div class="question__points">4 body</div>
       </div>
 
       <!-- <div id="q17" class="question">
