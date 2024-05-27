@@ -178,13 +178,37 @@
         <div class="question__body">
           <h3 class="question__title">Ukládání změn</h3>
           <div class="question__text">
-            <p>Jaký je postup ukládání změn na github?</p>
+            <p>Jaký je postup ukládání změn na GitHub?</p>
 
             <ol class="question__answers" type="A">
-              <li><code class="language-js">git add .</code> > <code class="language-js">git commit -m "my message"</code> > <code class="language-js">git push</code></li>
-              <li><code class="language-js">git commit</code> > <code class="language-js">git add "my message"</code> > <code class="language-js">git push</code></li>
-              <li><code class="language-js">git status</code> > <code class="language-js">git push</code> > <code class="language-js">git add</code></li>
-              <li><code class="language-js">git add .</code> > <code class="language-js">git commit "my message"</code> > <code class="language-js">git pull</code></li>
+              <li>
+                <pre><code class="language-shell"><!--
+                 -->git add .
+<!--             -->git commit -m "my message"
+<!--             -->git push
+<!--           --></code></pre>
+              </li>
+              <li>
+                <pre><code class="language-shell"><!--
+                 -->git commit
+<!--             -->git add "my message"
+<!--             -->git pull
+<!--           --></code></pre>
+              </li>
+              <li>
+                <pre><code class="language-shell"><!--
+                 -->git status
+<!--             -->git push
+<!--             -->git add
+<!--           --></code></pre>
+              </li>
+              <li>
+                <pre><code class="language-shell"><!--
+                 -->git add .
+<!--             -->git commit "my message"
+<!--             -->git pull
+<!--           --></code></pre>
+              </li>
             </ol>
           </div>
         </div>
@@ -321,14 +345,17 @@
             <pre><code class="language-js"><!--
           -->[
 <!--      -->  {
+<!--      -->    productId: '5Rkhrw1D',
 <!--      -->    brand: 'Guess',
 <!--      -->    price: 3600,
 <!--      -->  },
 <!--      -->  {
+<!--      -->    productId: 'vClBTWK7',
 <!--      -->    brand: 'Chanel',
 <!--      -->    price: 225000,
 <!--      -->  },
 <!--      -->  {
+<!--      -->    productId: 'NTvh0Cf0',
 <!--      -->    brand: 'Prada',
 <!--      -->    price: 65000,
 <!--      -->  },
@@ -356,7 +383,6 @@
 
             <pre><code class="language-html"><!--
             -->https://countries.czechitas.dev/v1/iso2/cz</code></pre>
-
             <p>
               Do konzole vypište zjištěný počet obyvatel ČR (vlastnost
               <code>population</code>).
@@ -512,22 +538,26 @@
 
             <ol>
               <li>
-                Celý kód vzorové aplikace najdete v
+                Celý kód vzorové aplikace v HTML, CSS a JS najdete v
                 <a href="https://github.com/Czechitas-podklady-WEB/dadjokes"
                   >tomto repozitáři</a
-                >. Na GitHubu si prohlédněte kód aplikace.
+                >. Na GitHubu si prohlédněte kód aplikace. Toto repository nebudete
+                potřebovat na svém počítači, stačí používat náled na GitHubu.
               </li>
 
               <li>
-                Pod svým GitHub účtem vytvořte repozitář s názvem
-                <code>dadjokes-react</code>. Repozitář si naklonujte do počítače
+                Pracovat budete v jiném repository. Vytvořte si kopii repository ze šablony
+                <a href="https://github.com/Czechitas-podklady-WEB/projekt-dadjokes">projekt-dadjokes</a>
+                do svého GitHub účtu. Repozitář si naklonujte do počítače
                 a vytvořenou složku si otevřete ve VS Code.
               </li>
 
               <li>
-                Ve VS Code otevřete terminál a vytvořte uvnitř složky novou
-                React aplikaci pomocí příkazu
-                <pre><code class="language-sh">npm init kodim-app@latest . react</code></pre>
+                Ve VS Code otevřete terminál, nainstalujte závislosti a spusťte vývojový server:
+                <pre><code class="language-sh"><!--
+               -->npm install
+<!--           -->npm run dev<!--
+               --></code></pre>
               </li>
 
               <li>
@@ -535,12 +565,14 @@
                 totéž a vypadala přesně stejně, jako vzorová aplikace. Stačí
                 mít jednu komponentu <code>HomePage</code>, zatím nemusíte
                 vytvářet žádné další. Ze vzorové aplikace můžete vykrást
-                libovolný kód, který se vám bude v Reactu hodit.
+                libovolný kód, který se vám bude v Reactu hodit. Obrázky
+                pro like a dislike už máte připravené ve složce <code>/img</code>,
+                přesuňte je na právné místo do komponenty <code>HomePage</code>.
               </li>
 
               <li>
                 Jako odpověď na tuto otázku uveďte odkaz na váš GitHub
-                repozitář.
+                repozitář (adresu zkopírujte z adresního řádku prohlížeče).
               </li>
             </ol>
           </div>
@@ -565,7 +597,7 @@
                 <code>dislikes</code>.
               </li>
               <li>
-                Pomocí <code>jsonhost</code> vytvořte API endpoint, který bude vracet 
+                Pomocí <code>apidroid</code> vytvořte API endpoint, který bude vracet 
                 data z JSON souboru
                 <a
                   href="https://raw.githubusercontent.com/Czechitas-podklady-WEB/daweb-test/deploy/jokes.json"
