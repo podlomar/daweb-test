@@ -178,13 +178,37 @@
         <div class="question__body">
           <h3 class="question__title">Ukládání změn</h3>
           <div class="question__text">
-            <p>Jaký je postup ukládání změn na github?</p>
+            <p>Jaký je postup ukládání změn na GitHub?</p>
 
             <ol class="question__answers" type="A">
-              <li><code class="language-js">git add .</code> > <code class="language-js">git commit -m "my message"</code> > <code class="language-js">git push</code></li>
-              <li><code class="language-js">git commit</code> > <code class="language-js">git add "my message"</code> > <code class="language-js">git push</code></li>
-              <li><code class="language-js">git status</code> > <code class="language-js">git push</code> > <code class="language-js">git add</code></li>
-              <li><code class="language-js">git add .</code> > <code class="language-js">git commit "my message"</code> > <code class="language-js">git pull</code></li>
+              <li>
+                <pre><code class="language-shell"><!--
+                 -->git add .
+<!--             -->git commit -m "my message"
+<!--             -->git push
+<!--           --></code></pre>
+              </li>
+              <li>
+                <pre><code class="language-shell"><!--
+                 -->git commit
+<!--             -->git add "my message"
+<!--             -->git pull
+<!--           --></code></pre>
+              </li>
+              <li>
+                <pre><code class="language-shell"><!--
+                 -->git status
+<!--             -->git push
+<!--             -->git add
+<!--           --></code></pre>
+              </li>
+              <li>
+                <pre><code class="language-shell"><!--
+                 -->git add .
+<!--             -->git commit "my message"
+<!--             -->git pull
+<!--           --></code></pre>
+              </li>
             </ol>
           </div>
         </div>
